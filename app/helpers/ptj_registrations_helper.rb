@@ -1,0 +1,2 @@
+module PtjRegistrationsHelper
+end
