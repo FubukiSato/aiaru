@@ -5,19 +5,19 @@ body{
     position: relative;
 }
 
-.content{
-    text-align: center;
-    height: 100%;
-    padding-bottom: 10px;
-}
-
 .contents{
     border-radius: 10px;
     background-color: #FFFFFF;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
-    min-width: 30%; min-height: 40%;
+    min-width: 30%; min-height: 30%;
+}
+
+.content{
+    text-align: center;
+    height: 100%;
+    padding-bottom: 10px;
 }
 
 .field{
@@ -25,13 +25,8 @@ body{
     color: #CCCCCC;
 }
 
-.label{
-    text-align: left;
-}
-
 h2{
-    text-align: center;
-   color: #00CCFF;	
+    color: #00CCFF;	
 }
 
 input[type="email"]{
@@ -57,14 +52,15 @@ input[type="password"]{
     margin-bottom: 20px;
 }
 
-.remember_me{
-    font-size: 15px;
-}
-
-.remember_me_field{
-    text-align: right;
-}
-
 .link{
     color: blue;
 }
+
+#error_explanation{
+    color: red;
+}
+
+#error_explanation ul{
+    list-style-type: none;
+}
+
