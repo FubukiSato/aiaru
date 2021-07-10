@@ -1,9 +1,11 @@
-
 <div class="contents">
 <div class="content">
 <h2>Sign in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+<p class="alert"><%= alert %></p>
+
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "Email"%>
   </div>
