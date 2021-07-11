@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   get 'home/top'
 
-
+  root to: "home#top"
 
   get 'ptj_registraton' => 'ptj_registrations#registration'
  

@@ -8,13 +8,20 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   </head>
 
   
 
   <body>
     <header>
-      <h1>Aiaru</h1>
+      <a href="top"><h1>Aiaru</h1></a>
+      <%if user_signed_in? %>
+      <%= link_to("ログアウト","/users/sign_out")%>
+      <%else%>
+      <%= link_to("新規登録","/users/sign_up")%>
+      <%= link_to("ログイン","/users/sign_in")%>
+      <%end%>
     </header>
 
     <%# deivseのフラッシュメッセージを表示 %>

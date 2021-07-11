@@ -20,6 +20,7 @@ html{
 }
 
  header{
+     color: black;
      background-color: #f6ad49;
      align-items: center;
  }
@@ -28,4 +29,6 @@ html{
      margin: 0;
      margin-left: 40px;
      font-size: 40px;
+     font-family: 'Anton', sans-serif;
+     letter-spacing: 5px;
  }
