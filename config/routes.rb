@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   
-  get 'home/top'
+  get '/home' => 'home#top'
 
   root to: "home#top"
 

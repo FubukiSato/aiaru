@@ -15,12 +15,20 @@
 
   <body>
     <header>
-      <a href="top"><h1>Aiaru</h1></a>
+      <div class="header-logo">
+      <a href="/home"><%= image_tag 'Aiaru-logo.png' %></a>
+      </div>
       <%if user_signed_in? %>
+      <div class="header-btn">
       <%= link_to("ログアウト","/users/sign_out")%>
+      </div>
       <%else%>
+      <div class="header-btn">
       <%= link_to("新規登録","/users/sign_up")%>
+      </div>
+      <div class="header-btn">
       <%= link_to("ログイン","/users/sign_in")%>
+      </div>
       <%end%>
     </header>
 

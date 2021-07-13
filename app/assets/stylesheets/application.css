@@ -22,13 +22,25 @@ html{
  header{
      color: black;
      background-color: #f6ad49;
-     align-items: center;
+     overflow: hidden;
+     vertical-align: middle;
  }
 
- header h1{
-     margin: 0;
-     margin-left: 40px;
-     font-size: 40px;
-     font-family: 'Anton', sans-serif;
-     letter-spacing: 5px;
- }
+.header-logo{
+    margin-left: 20px;
+    float: left;
+}
+
+.header-logo div{
+    vertical-align: middle;
+}
+
+.header-btn{
+    height: 100%;
+    text-decoration: none;
+    float: right;
+    margin-right: 20px;
+    font-size: 20px;
+    color: black;
+}
+
