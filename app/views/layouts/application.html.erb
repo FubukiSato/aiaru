@@ -21,8 +21,15 @@
       <nav class="pc-nav">
       <ul>
       <%if user_signed_in? %>
-      <li><a href="/ptj_registraton">バイト登録</li>
+
+      <li><a href="/ptj_registraton">バイトを募集する</a></li>
+
+      <li><a href="#">募集したバイト一覧</a></li>
+
+      <li><a href="#">その他</a></li>
+
       <li><a href="/users/sign_out">ログアウト</a></li>
+
       <%else%>
       <li><a href="/users/sign_in">ログイン</a></li>
       <li><a href="/users/sign_up">新規登録</a></li>

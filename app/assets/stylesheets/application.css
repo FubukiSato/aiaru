@@ -59,10 +59,20 @@ h1{
  li {
     margin: 0 0 0 40px;
     font-size: 17px;
+    opacity: 0.8;
+ }
+
+ li:hover{
+     opacity: 1.0;
+     transform: 1.0;
  }
 
  nav {
     margin: 0 0 0 auto;
+ }
+
+ .dropdown{
+    display: block;
  }
 
  .space{
