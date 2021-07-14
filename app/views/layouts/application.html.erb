@@ -15,26 +15,28 @@
 
   <body>
     <header>
-      <div class="header-logo">
-      <a href="/home"><%= image_tag 'Aiaru-logo.png' %></a>
-      </div>
+      <h1>
+      <a href="/home">Aiaru</a>
+      </h1>
+      <nav class="pc-nav">
+      <ul>
       <%if user_signed_in? %>
-      <div class="header-btn">
-      <%= link_to("ログアウト","/users/sign_out")%>
-      </div>
+      <li><a href="/ptj_registraton">バイト登録</li>
+      <li><a href="/users/sign_out">ログアウト</a></li>
       <%else%>
-      <div class="header-btn">
-      <%= link_to("新規登録","/users/sign_up")%>
-      </div>
-      <div class="header-btn">
-      <%= link_to("ログイン","/users/sign_in")%>
-      </div>
+      <li><a href="/users/sign_in">ログイン</a></li>
+      <li><a href="/users/sign_up">新規登録</a></li>
       <%end%>
+      </ul>
+      </nav>
     </header>
 
+    <div class="space"></div>
     <%# deivseのフラッシュメッセージを表示 %>
-    <p class="notice"><%= notice %></p> <!-- ログインに成功しました。とか、ログアウトしました。 -->
-
+    <div class="notice">
+    <p><%= notice %></p> <!-- ログインに成功しました。とか、ログアウトしました。 -->
+    </div>
     <%= yield %>
+    
   </body>
 </html>

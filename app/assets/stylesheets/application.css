@@ -14,33 +14,70 @@
  *= require_self
  */
 
+ * {
+    box-sizing: border-box;
+ }
+
 html{ 
     margin: 0;
     padding: 0;
 }
 
- header{
-     color: black;
-     background-color: #f6ad49;
-     overflow: hidden;
-     vertical-align: middle;
+body{
+    margin: 0;
+    padding: 0;
+    background: #EEEEEE;
+}
+
+header {
+    width: 100%;
+    padding: 10px 5% 10px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #008080;
+}
+
+h1{
+    margin: 0; padding: 0;
+    font-size: 30px;
  }
 
-.header-logo{
-    margin-left: 20px;
-    float: left;
-}
-
-.header-logo div{
-    vertical-align: middle;
-}
-
-.header-btn{
-    height: 100%;
+ a {	
     text-decoration: none;
-    float: right;
-    margin-right: 20px;
-    font-size: 20px;
-    color: black;
-}
+    color: #008080;
+ }
 
+ ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+ }
+
+ li {
+    margin: 0 0 0 40px;
+    font-size: 17px;
+ }
+
+ nav {
+    margin: 0 0 0 auto;
+ }
+
+ .space{
+     padding-top: 70px;
+ }
+
+ .notice{
+    width: 80%;
+    margin: 0 auto;
+    color: #4689FF;
+    background-color: #8EB8FF;
+    text-align: center;
+    border-radius: 5px;
+ }
+
+ .notice p{
+     margin: 0;
+ }
