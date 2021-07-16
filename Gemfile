@@ -60,3 +60,5 @@ gem 'devise'
 gem 'config'
 
 gem "jquery-rails"
+
+gem 'carrierwave'
