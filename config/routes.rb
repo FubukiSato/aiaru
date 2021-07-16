@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   root to: "home#top"
 
-  get 'ptj_registraton' => 'ptj_registrations#registration'
+  
  
 end
