@@ -2,5 +2,16 @@
 <%= form_tag("/posts/create",method: :post) do %>
 <p>店名（必須）<br>
 <input type="text" name="STName"></p>
-
+<p>職種（必須）<br>
+<input type="text" name="occupation"></p>
+<p>給与（必須）<br>
+<input type="text" name="Salary"></p>
+<p>勤務時間（必須）<br>
+<input type="text" name="OFhours"></p>
+<p>勤務地（必須）<br>
+<input type="text" name="location"></p>
+<p>待遇 福利厚生（必須）<br>
+<input type="textarea" name="treatment"></p>
+<p>勤務期間（必須）<br>
+<input type="text" name="period"></p>
 <% end %>
