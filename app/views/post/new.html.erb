@@ -1,10 +1,11 @@
+<div class="content">
 <h1>アルバイトの登録</h1>
 <%= form_tag("/posts/create",method: :post) do %>
 
 <div class="upload-preview">
 <img />
 </div>
-<input class="file" name="logo" type="file">
+<input class="file" name="image" type="file">
 
 <script type="text/javascript">
   $(document).ready(function(){
@@ -38,3 +39,4 @@
 <p>勤務期間（必須）<br>
 <input type="text" name="period"></p>
 <% end %>
+</div>
