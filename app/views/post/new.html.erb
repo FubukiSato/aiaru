@@ -1,6 +1,6 @@
 <div class="content-new">
  <h1>アルバイトの登録</h1>
- <%= form_tag("/post/create",method: :post) do %>
+ <%= form_tag("/post/create",{multipart: true}) do %>
 
 
   <div class="image-contents">
@@ -8,7 +8,6 @@
       <img src="/assets/sample.jpg" alt="サンプル画像" class="preview">
     </div>
     <input class="file" name="image" type="file">
-
 
     <script type="text/javascript">
       $(document).ready(function(){
