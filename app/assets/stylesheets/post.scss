@@ -1,10 +1,43 @@
 // Place all the styles related to the post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.content{
-    margin-top: 100px;
-    width: 70%;
-    margin: 0 auto;
-    text-align: center;
+.content-new{
+    margin-left: 15%;
+    margin-right: 15%;
+    height: auto;
     background-color: white;
 }
+
+.content-new h1{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+img.preview{
+    width: 70%;
+    height: 70%;
+}
+
+.image-contents{
+    text-align: center;
+}
+
+.image-contents p{
+    padding-bottom: 10px;
+    border-bottom: 2px solid gray;
+}
+
+.input-area{
+    font-size: 20px;
+}
+
+.input-area input{
+    width: 30%;
+}
+
+.image-contents button{
+    margin-bottom: 100px;
+}
+
+
