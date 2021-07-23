@@ -1,3 +1,3 @@
 class Work < ApplicationRecord
-   
+
 end
