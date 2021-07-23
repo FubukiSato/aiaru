@@ -2,13 +2,14 @@ class CreateWorks < ActiveRecord::Migration[6.1]
   def change
     create_table :works do |t|
       t.string :image
-      t.string :stname
+      t.string :name
       t.string :occupation
-      t.integer :Salary
-      t.integer :OFhours
+      t.string :wage
+      t.text :hours
       t.string :location
-      t.string :treatment
-      t.string :period
+      t.text :period
+      t.string :link
+      t.text :note
 
       t.timestamps
     end
