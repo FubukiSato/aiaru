@@ -10,7 +10,7 @@ class PostController < ApplicationController
         @work.image = "#{current_user.id}.jpg"
         @work.save
         image = params[:image]
-        File.binwrite("public/ptj_images/#{@work.image}",image.read)
+        File.binwrite("public/#{@work.image}",image.read)
         redirect_to("/home")
     end
 end
