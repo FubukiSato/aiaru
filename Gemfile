@@ -62,3 +62,5 @@ gem 'config'
 gem "jquery-rails"
 
 gem 'carrierwave'
+
+gem 'pry-rails'
