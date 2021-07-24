@@ -13,4 +13,21 @@ class PostController < ApplicationController
         File.binwrite("public/#{@work.image}",image.read)
         redirect_to("/home")
     end
+
+    def edit
+        @work = Work.find_by(user_id: current_user.id)
+    end
+
+    def update
+        @work = Work.find_by(user_id: current_user.id)
+        @work.update(name: params[:name],occupation: params[:occupation],wage: params[:wage],hours: params[:hours],location: params[:location],period: params[:period],link: params[:link],note: params[:note])
+        @work.image = "#{current_user.id}.jpg"
+        @work.save
+        image = params[:image]
+        File.binwrite("public/#{@work.image}",image.read)
+        redirect_to("/home")
+    end
+
+    def delete
+    end
 end

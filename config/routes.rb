@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   end
   
   get 'post/new' => 'post#new'
+  get 'post/edit' => 'post#edit'
   post 'post/create' => 'post#create'
+  post 'post/update' => 'post#update'
+  
+  
 
   get 'home' => 'home#top'
 

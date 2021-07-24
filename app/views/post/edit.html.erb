@@ -1,0 +1,51 @@
+
+<% if @work.present? %>
+<div class="content-new">
+ <h1>アルバイトの登録内容の編集</h1>
+ <%= form_tag("/post/update",{multipart: true}) do %>
+
+
+  <div class="image-contents">
+        <div class="upload-preview">
+            <img src= "/<%= @work.image %>"  alt="サンプル画像" class="preview">
+        </div>
+        <input class="file" name="image" type="file">
+
+
+        <script type="text/javascript">
+                $(document).ready(function(){
+                    var preview = $(".upload-preview img");
+                    
+                    $(".file").change(function(event){
+                    var input = $(event.currentTarget);
+                    var file = input[0].files[0];
+                    var reader = new FileReader();
+
+                    reader.onload = function(e){
+                        image_base64 = e.target.result;
+                        preview.attr("src", image_base64);
+                    };
+                    reader.readAsDataURL(file);
+                    });
+                });
+        </script>
+
+
+        <div class="input-area">
+            <p>店名<input type="text" name="name" value=<%= @work.name %>></p>
+            <p>職種<input type="text" name="occupation" value=<%= @work.occupation %>></p>
+            <p>時給<input type="number" name="wage" value=<%= @work.wage %>></p>
+            <p>勤務時間<textarea type="text" name="hours"><%= @work.hours %></textarea></p>
+            <p>勤務地<input type="text" name="location" value=<%= @work.location %>></p>
+            <p>勤務期間<textarea type="text" name="period"><%= @work.period %></textarea></p>
+            <p>ホームページリンク<input type="url" name="link" value=<%= @work.link %>></p>
+            <p>備考<textarea type="text" name="note"><%= @work.note %></textarea></p>
+            <button type="submit">送信する</button>
+        </div>
+  </div>
+  <% end %>
+</div>
+  <% else %>
+  <p>アルバイトが登録されていません</p>
+  <%= link_to("アルバイトの登録へ","/post/new") %>
+  <% end %>
