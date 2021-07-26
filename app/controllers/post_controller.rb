@@ -2,7 +2,7 @@ class PostController < ApplicationController
     before_action :authenticate_user!
 
     def new
-
+        @work = Work.find_by(user_id: current_user.id)
     end
 
     def create
