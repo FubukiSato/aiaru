@@ -33,6 +33,15 @@ class PostController < ApplicationController
         redirect_to("/home")
     end
 
-    def delete
+    def deleteconfirm
+        @work = Work.find_by(user_id: current_user.id)
     end
+
+    def delete
+        @work = Work.find_by(user_id: current_user.id)
+        @work.destroy
+        redirect_to("/home");
+    end
+
+
 end
