@@ -1,43 +1,13 @@
-<% if @work.present? == false %>
+<% if @work.present? %>
 <div class="content-new">
  <h1>アルバイトの登録</h1>
+
  <%= form_for(@work, url: {controller: 'post', action: 'create' }, method: :post) do |f| %>
 
-<!--
-  <div class="image-contents">
-    <div class="upload-preview">
-      <img src="/assets/sample.jpg" alt="サンプル画像" class="preview">
-    </div>
-    <input class="file" name="image" type="file">
+    <%= f.label :image , "画像を選択して下さい" %><br>
+    <%= f.file_field :image %>
 
--->
 
-<div class="image-contents">
-  <div class="upload-preview">
-    <%= f.file_field :image , "画像を選択して下さい"%>
-</div>
-</div>
-
-    <%#
-    <script type="text/javascript">
-      $(document).ready(function(){
-        var preview = $(".upload-preview img");
-        
-        $(".file").change(function(event){
-          var input = $(event.currentTarget);
-          var file = input[0].files[0];
-          var reader = new FileReader();
-
-          reader.onload = function(e){
-              image_base64 = e.target.result;
-              preview.attr("src", image_base64);
-          };
-
-          reader.readAsDataURL(file);
-        });
-    });
-    </script>  
-    %>
 
         <div class="input-area">
           <p>
@@ -77,7 +47,6 @@
   </div>
   <% end %>
 </div>
-
 <% else %>
-<p>申し訳ありません。<br>アルバイトの登録は1アカウントにつき一つまでとなっております。</p>
+  <p>申し訳ありません。<br>アルバイトの登録は1アカウントにつき一つまでとなっております。</p>
 <% end %>

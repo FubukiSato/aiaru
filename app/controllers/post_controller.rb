@@ -2,17 +2,18 @@ class PostController < ApplicationController
     before_action :authenticate_user!
 
     def new
-        @work = Work.new
-        if Work.find_by(id: current_user.id)
-            redirect_to("/home")
+        if Work.find_by(user_id: current_user.id).present?
+            @work = Work.find_by(user_id: current_user.id)
+        else
+            @work = Work.new
         end
     end
 
     def create
-        @user = User.new(work_params)
-        @user.user_id = current_user.id
-        if @user.save
-            render 'top'
+        @work = Work.new(work_params)
+        @work.user_id = current_user.id
+        if @work.save
+            redirect_to("/home")
         else
             render 'new'
         end
@@ -25,14 +26,7 @@ class PostController < ApplicationController
 
     def update
         @work = Work.find_by(user_id: current_user.id)
-        @work.update(name: params[:name],occupation: params[:occupation],wage: params[:wage],hours: params[:hours],location: params[:location],period: params[:period],link: params[:link],note: params[:note])
-        
-        if params[:image].present?
-        @work.image = "#{current_user.id}.jpg"
-        image = params[:image]
-        File.binwrite("public/#{@work.image}",image.read)
-        end
-
+        @work.update(work_params)
         @work.save
         
         redirect_to("/home")
