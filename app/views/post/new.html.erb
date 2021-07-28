@@ -3,8 +3,31 @@
 
  <%= form_for(@work, url: {controller: 'post', action: 'create' }, method: :post) do |f| %>
 
+
+    <% if @work.image.present? %>
+      <%= image_tag @work.image, id: :img_prev %>
+    <% else %>
+      <%= image_tag "sample.jpg", id: :img_prev %>
+    <% end %>
     <%= f.label :image , "画像を選択して下さい" %><br>
-    <%= f.file_field :image %>
+    <%= f.file_field :image, id: "work_img" %>
+
+      <script type="text/javascript">
+    $(function() {
+      function readURL(input) {
+          if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+      $('#img_prev').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+          }
+      }
+      $("#work_img").change(function(){
+          readURL(this);
+      });
+    });
+  </script>
 
         <div class="input-area">
           <p>
