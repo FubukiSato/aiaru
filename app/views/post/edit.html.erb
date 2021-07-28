@@ -3,14 +3,15 @@
  <h1>アルバイトの登録内容の編集</h1>
  <%= form_tag("/post/update",{multipart: true}) do %>
 
-
+<!--
   <div class="image-contents">
         <div class="upload-preview">
             <img src= "/<%= @work.image %>"  alt="サンプル画像" class="preview">
         </div>
         <input class="file" name="image" type="file">
+-->
 
-
+<%#
         <script type="text/javascript">
                 $(document).ready(function(){
                     var preview = $(".upload-preview img");
@@ -28,7 +29,7 @@
                     });
                 });
         </script>
-
+%>
 
         <div class="input-area">
             <p>店名<input type="text" name="name" value=<%= @work.name %>></p>

@@ -1,15 +1,24 @@
 <% if @work.present? == false %>
 <div class="content-new">
  <h1>アルバイトの登録</h1>
- <%= form_tag("/post/create",{multipart: true}) do %>
+ <%= form_for(@work, url: {controller: 'post', action: 'create' }, method: :post) do |f| %>
 
-
+<!--
   <div class="image-contents">
     <div class="upload-preview">
       <img src="/assets/sample.jpg" alt="サンプル画像" class="preview">
     </div>
     <input class="file" name="image" type="file">
 
+-->
+
+<div class="image-contents">
+  <div class="upload-preview">
+    <%= f.file_field :image , "画像を選択して下さい"%>
+</div>
+</div>
+
+    <%#
     <script type="text/javascript">
       $(document).ready(function(){
         var preview = $(".upload-preview img");
@@ -27,19 +36,44 @@
           reader.readAsDataURL(file);
         });
     });
-    </script>
+    </script>  
+    %>
 
-    <div class="input-area">
-        <p>店名<input type="text" name="name"></p>
-        <p>職種<input type="text" name="occupation"></p>
-        <p>時給<input type="number" name="wage"></p>
-        <p>勤務時間<textarea type="text" name="hours" placeholder="勤務時間などを入力してください"></textarea></p>
-        <p>勤務地<input type="text" name="location"></p>
-        <p>勤務期間<textarea type="text" name="period" placeholder="勤務期間などを入力してください"></textarea></p>
-        <p>ホームページリンク<input type="url" name="link"></p>
-        <p>備考<textarea type="text" name="note" placeholder="備考を入力してください"></textarea></p>
-        <button type="submit">送信する</button>
-      </div>
+        <div class="input-area">
+          <p>
+            <%= f.label :name, "店名" %><br>
+            <%= f.text_field :name %>
+          </p>
+          <p>
+            <%= f.label :occupation, "職種" %><br>
+            <%= f.text_field :occupation %>
+          </p>
+          <p>
+            <%= f.label :wage, "時給" %><br>
+            <%= f.number_field :wage %>
+          </p>
+          <p>
+            <%= f.label :hours, "勤務時間" %><br>
+            <%= f.text_area :hours %>
+          </p>
+          <p>
+            <%= f.label :location, "勤務地" %><br>
+            <%= f.text_field :location %>
+          </p>
+          <p>
+            <%= f.label :period, "勤務期間" %><br>
+            <%= f.text_field :period %>
+          </p>
+          <p>
+            <%= f.label :link, "ホームページリンク" %><br>
+            <%= f.text_field :link %>
+          </p>
+          <p>
+            <%= f.label :note, "備考" %><br>
+            <%= f.text_area :note %>
+          </p>
+            <%= f.submit "登録する"%>
+        </div>
   </div>
   <% end %>
 </div>
