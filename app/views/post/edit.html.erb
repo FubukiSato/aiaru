@@ -1,6 +1,10 @@
-<% if @work.present? %>
+<% if @work.present? == false %>
+<p>アルバイトが登録されていません</p>
+<%= link_to("アルバイトの登録へ","/post/new") %>
+
+ <% else %>
 <div class="content-new">
- <h1>アルバイトの登録内容の編集</h1>
+ <h1>アルバイトの登録内容の編集と削除</h1>
 <%= form_for(@work, url: {controller: 'post', action: 'update' }, method: :post) do |f| %>
 
     <%= f.label :image , "画像を選択して下さい" %><br>
@@ -46,7 +50,4 @@
   </div>
   <% end %>
 </div>
-  <% else %>
-  <p>アルバイトが登録されていません</p>
-  <%= link_to("アルバイトの登録へ","/post/new") %>
-  <% end %>
+<% end %>
