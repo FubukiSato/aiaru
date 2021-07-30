@@ -76,8 +76,8 @@ h1{
  }
 
  .notice{
-    width: 80%;
-    margin: 0 auto;
+    font-size: 16px;
+    width: 100%;
     color: #228b22;
     background-color: #98fb98;
     text-align: center;
