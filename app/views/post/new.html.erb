@@ -3,12 +3,8 @@
 
  <%= form_for(@work, url: {controller: 'post', action: 'create' }, method: :post) do |f| %>
 
-
-    <% if @work.image.present? %>
-      <%= image_tag @work.image, id: :img_prev %>
-    <% else %>
-      <%= image_tag "sample.jpg", id: :img_prev %>
-    <% end %>
+    <%= image_tag 'sample.jpg', id: :img_prev %>
+    
     <%= f.label :image , "画像を選択して下さい" %><br>
     <%= f.file_field :image, id: "work_img" %>
 

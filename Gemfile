@@ -64,3 +64,7 @@ gem "jquery-rails"
 gem 'carrierwave'
 
 gem 'pry-rails'
+
+gem 'fog-aws'
+
+gem 'dotenv-rails'
