@@ -1,10 +1,7 @@
 <h1>以下の内容のバイト募集を削除してもよろしいですか？</h1>
 
-
-
-<img src= "/<%= @work.image %>"  alt="サンプル画像" class="preview">
+<img src= "<%= @work.image.url %>"  alt="サンプル画像" class="preview">
 <p><%= @work.name %></p>
-
 
 <%= link_to("削除","/post/delete")%>
 <%= link_to("戻る","/post/edit")%>

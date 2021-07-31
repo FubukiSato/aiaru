@@ -17,9 +17,10 @@ body{
     border-radius: 10px;
     background-color: #FFFFFF;
     position: absolute;
-    top: 50%; left: 50%;
+    top: 60%; left: 50%; 
     transform: translate(-50%,-50%);
     min-width: 30%; min-height: 30%;
+    margin-bottom: 50px;
 }
 
 .content{
@@ -83,5 +84,9 @@ input[type="password"]{
 #error_explanation ul{
     padding: 0;
     list-style-type: none;
+}
+
+#error_explanation li{
+    margin: 0 auto;
 }
 
