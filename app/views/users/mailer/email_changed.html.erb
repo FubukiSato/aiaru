@@ -1,7 +1,10 @@
-<p>Hello <%= @email %>!</p>
+<p>いつもAiaruをご利用くださりありがとうございます</p>
 
 <% if @resource.try(:unconfirmed_email?) %>
-  <p>We're contacting you to notify you that your email is being changed to <%= @resource.unconfirmed_email %>.</p>
+  <p>お客様のメールアドレスが <%= @resource.unconfirmed_email %> に変更されることを通知します。</p>
 <% else %>
-  <p>We're contacting you to notify you that your email has been changed to <%= @resource.email %>.</p>
+  <p>お客様のメールアドレスが <%= @resource.email %> に変更されることを通知します。</p>
 <% end %>
+
+<p>今後ともAiaruをよろしくお願いいたします。</p>
+
