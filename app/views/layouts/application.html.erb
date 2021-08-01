@@ -12,8 +12,9 @@
   </head>
 
   
-  <body>
-    <header>
+<body>
+  <div id="wrapper">
+    <header class="header">
       <h1>
       <a href="/home">Aiaru</a>
       </h1>
@@ -39,14 +40,10 @@
 
     <%# deivseのフラッシュメッセージを表示 %>
     <div class="notice">
-    <p><%= notice %></p> <!-- ログインに成功しました。とか、ログアウトしました。 -->
+      <p><%= notice %></p> <!-- ログインに成功しました。とか、ログアウトしました。 -->
     </div>
-    <div class="all-wrapper">
     <%= yield %>
-   
-    <footer>
-    <p>© 2020 Aiaru.</p>
-    </footer>
-     </div>
-  </body>
+    <footer>© 2020 Aiaru</footer>
+  </div>
+</body>
 </html>

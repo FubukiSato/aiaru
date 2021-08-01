@@ -1,6 +1,6 @@
 <div class="content-new">
  <h1>アルバイトの登録内容の編集と削除</h1>
-<%= form_for(@work, url: {controller: 'post', action: 'update' }, method: :post) do |f| %>
+    <%= form_for(@work, url: {controller: 'post', action: 'update' }, method: :post) do |f| %>
 
     <% if @work.image.present? %>
       <%= image_tag @work.image.url, id: :img_prev %>
@@ -64,7 +64,6 @@
             <%= f.submit "登録する"%>
         </div>
         <%= link_to("アルバイトの削除","/post/deleteconfirm")%>
-  </div>
   <% end %>
 </div>
 
