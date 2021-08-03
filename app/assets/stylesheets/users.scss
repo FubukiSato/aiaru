@@ -20,7 +20,6 @@ body{
     top: 55%; left: 50%; 
     transform: translate(-50%,-50%);
     min-width: 30%; min-height: 30%;
-    margin-bottom: 50px;
 }
 
 .content{
@@ -95,3 +94,6 @@ input[type="password"]{
     font-size: 15px;
 }
 
+.space{
+    min-height: 100vh;
+ }
