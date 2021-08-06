@@ -33,7 +33,7 @@
             <p>アルバイト内容の登録</p>
           </div>
 
-        <div class="input-area">
+        
           <div class="cp_iptxt">
             <%= f.label :name, "店名",class: "label-mini" %><br>
             <label class="ef">
@@ -41,29 +41,29 @@
             </label>
           </div>
 
-          <div class="input-area">
+          
             <div class="cp_iptxt">
-            <%= f.label :occupation, "職種",class: "label-mini"%><br>
-            <label class="ef">
-            <%= f.text_field :occupation ,placeholder: "職種" %>
-            </label>
-          </div>
+              <%= f.label :occupation, "職種",class: "label-mini"%><br>
+              <label class="ef">
+              <%= f.text_field :occupation ,placeholder: "職種" %>
+              </label>
+            </div>
 
-          <div class="input-area">
+          
             <div class="cp_iptxt">
-            <%= f.label :wage, "時給",class: "label-mini" %><br>
-            <label class="ef">
-            <%= f.number_field :wage ,placeholder: "時給" %>
-            </label>
-          </div>
+              <%= f.label :wage, "時給",class: "label-mini" %><br>
+              <label class="ef">
+              <%= f.number_field :wage ,placeholder: "時給" %>
+              </label>
+            </div>
 
-          <div class="input-area">
+          
             <div class="cp_iptxt">
-            <%= f.label :hours, "勤務時間",class: "label-mini" %><br>
-            <label class="ef">
-            <%= f.text_area :hours ,placeholder: "勤務時間" %>
-            </label>
-          </div>
+              <%= f.label :hours, "勤務時間",class: "label-mini" %><br>
+              <label class="ef">
+              <%= f.text_area :hours ,placeholder: "勤務時間" %>
+              </label>
+            </div>
 
           <p>
             <%= f.label :location, "勤務地" %><br>
@@ -82,7 +82,7 @@
             <%= f.text_area :note ,placeholder: "備考" %>
           </p>
             <%= f.submit "登録する"%>
-        </div>
+        
   <% end %>
 </div>
 
