@@ -65,24 +65,38 @@
               </label>
             </div>
 
-          <p>
-            <%= f.label :location, "勤務地" %><br>
-            <%= f.text_field :location ,placeholder: "勤務地" %>
-          </p>
-          <p>
-            <%= f.label :period, "勤務期間" %><br>
-            <%= f.text_field :period ,placeholder: "勤務期間" %>
-          </p>
-          <p>
+            <div class="cp_iptxt">
+              <%= f.label :location, "勤務地" %><br>
+              <label class="ef">
+              <%= f.text_field :location ,placeholder: "勤務地" %>
+              </label>
+            </div>
+
+            <div class="cp_iptxt">
+              <%= f.label :period, "勤務期間" %><br>
+              <label class="ef">
+              <%= f.text_field :period ,placeholder: "勤務期間" %>
+            </label>
+          </div>
+
+          <div class="cp_iptxt">
             <%= f.label :link, "ホームページリンク" %><br>
+            <label class="ef">
             <%= f.text_field :link ,placeholder: "ホームページリンク" %>
-          </p>
-          <p>
+            </label>
+          </div>
+
+          <div class="cp_iptxt">
             <%= f.label :note, "備考" %><br>
+            <label class="ef">
             <%= f.text_area :note ,placeholder: "備考" %>
-          </p>
-            <%= f.submit "登録する"%>
-        
+            </label>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "登録する",class: 'btn'%>
+          </div>
+
   <% end %>
 </div>
 
