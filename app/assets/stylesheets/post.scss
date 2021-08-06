@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .content-new{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 25%;
+    margin-right: 25%;
     height: auto;
     background-color: white;
     text-align: center;
@@ -13,11 +13,23 @@
     padding-top: 5%;
     padding-bottom: 5%;
     text-align: center;
+    font-size: 25px;
+    font-weight: lighter;
+    color: gray;
 }
 
-img.prev{
-    width: 70%;
-    height: 70%;
+.label{
+    height: 50px;
+    background-color: #dcdcdc
+}
+
+.label p{
+    color: gray;
+}
+
+#img_prev{
+    width: 50%;
+    height: 50%;
 }
 
 .image-contents{
