@@ -8,20 +8,17 @@
         </div>
 
         <%= image_tag @work.image.url, id: "img_prev"%>
-        <%= f.file_field :image, id: "work_img" %>
 
           <div class="label">
             <p>アルバイト内容</p>
           </div>
 
-        
           <div class="cp_iptxt">
             <%= f.label :name, "店名",class: "label-mini" %><br>
             <label class="ef">
             <%= f.text_field :name ,placeholder: "店名",:readonly => true%>
             </label>
           </div>
-
           
             <div class="cp_iptxt">
               <%= f.label :occupation, "職種",class: "label-mini"%><br>

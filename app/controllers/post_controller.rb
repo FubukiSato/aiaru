@@ -24,6 +24,7 @@ class PostController < ApplicationController
 
     def createconfirm
         @work = Work.new(work_params)
+        @work.save
     end
 
     def edit
