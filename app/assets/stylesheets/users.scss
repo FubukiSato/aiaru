@@ -17,11 +17,25 @@ body{
     border-radius: 10px;
     background-color: #FFFFFF;
     position: absolute;
-    top: 55%; left: 50%; 
+    top: 50%; left: 50%; 
     transform: translate(-50%,-50%);
     min-width: 30%; min-height: 30%;
     border: 2px solid #008080;
 }
+
+.user-edit{
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 65%; left: 50%; 
+    transform: translate(-50%,-50%);
+    min-width: 30%; min-height: 30%;
+    border: 2px solid #008080;
+}
+
+.space{
+    min-height: 110vh;
+ }
 
 .content{
     text-align: center;
@@ -92,6 +106,4 @@ input[type="password"]{
     font-size: 15px;
 }
 
-.space{
-    min-height: 100vh;
- }
+

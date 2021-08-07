@@ -57,8 +57,9 @@
 
 .label-mini{
     font-size: 15px;
-    
 }
+
+
 
 
 .cp_iptxt input[type='text'] {
@@ -119,5 +120,18 @@
 
 .content-new .actions{
     text-align: center;
+    margin-top: 10%;
     margin-bottom: 20%;
+}
+
+.cp_iptxt input[type='text']{
+    color: black;
+}
+
+.cp_iptxt input[type='number']{
+    color: black;
+}
+
+.cp_iptxt textarea{
+    color: black;
 }

@@ -22,6 +22,10 @@ class PostController < ApplicationController
         
     end
 
+    def createconfirm
+        @work = Work.new(work_params)
+    end
+
     def edit
         if Work.find_by(user_id: current_user.id)
             @work = Work.find_by(user_id: current_user.id)

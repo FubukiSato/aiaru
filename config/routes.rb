@@ -9,12 +9,11 @@ Rails.application.routes.draw do
   
   get 'post/new' => 'post#new'
   get 'post/edit' => 'post#edit'
+  get 'post/delete' => 'post#delete'
   get 'post/deleteconfirm' => 'post#deleteconfirm'
   post 'post/create' => 'post#create'
   post 'post/update' => 'post#update'
-
-  get 'post/delete' => 'post#delete'
-  
+  post 'post/createconfirm' => 'post#createconfirm'
   
 
   get 'home' => 'home#top'
