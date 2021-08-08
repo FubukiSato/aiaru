@@ -11,20 +11,28 @@ class PostController < ApplicationController
     end
 
     def create
-        @work = Work.new(work_params)
+        @work = Work.new(name: session[:name],occupation: session[:occupation],wage: session[:wage],hours: session[:hours],wage: session[:wage],hours: session[:hours],location: session[:location],period: session[:period],link: session[:link],note: session[:note])
         @work.user_id = current_user.id
+        @work.image.retrieve_from_cache!(session[:image_cache_name])
         if @work.save
             flash[:notice] = "アルバイトの作成に成功しました"
             redirect_to("/home")
         else
             render 'new'
         end
-        
     end
 
     def createconfirm
         @work = Work.new(work_params)
-        @work.save
+        session[:image_cache_name] = @work.image.cache_name
+        session[:name] = params[:work][:name]
+        session[:occupation] = params[:work][:occupation]
+        session[:wage] = params[:work][:wage]
+        session[:hours] = params[:work][:hours]
+        session[:location] = params[:work][:location]
+        session[:period] = params[:work][:period]
+        session[:link] = params[:work][:link]
+        session[:note] = params[:work][:note]
     end
 
     def edit
@@ -63,7 +71,7 @@ class PostController < ApplicationController
 
     private
         def work_params
-            params.require(:work).permit(:image,:name,:occupation,:wage,:hours,:location,:period,:link,:note)
+            params.require(:work).permit(:image,:image_cache,:name,:occupation,:wage,:hours,:location,:period,:link,:note)
         end
 
 
