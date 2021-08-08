@@ -16,6 +16,15 @@ class PostController < ApplicationController
         @work.image.retrieve_from_cache!(session[:image_cache_name])
         if @work.save
             flash[:notice] = "アルバイトの作成に成功しました"
+            session[:image_cache_name] = nil
+            session[:name] = nil
+            session[:occupation] = nil
+            session[:wage] = nil
+            session[:hours] = nil
+            session[:location] = nil
+            session[:period] = nil
+            session[:link] = nil
+            session[:note] = nil
             redirect_to("/home")
         else
             render 'new'
@@ -48,7 +57,7 @@ class PostController < ApplicationController
         @work = Work.find_by(user_id: current_user.id)
         @work.update(work_params)
         if @work.save
-        flahs[:notice] = "アルバイトの内容を更新しました"
+        flash[:notice] = "アルバイトの内容を更新しました"
         redirect_to("/home")
         else
             render 'update'
@@ -73,6 +82,7 @@ class PostController < ApplicationController
         def work_params
             params.require(:work).permit(:image,:image_cache,:name,:occupation,:wage,:hours,:location,:period,:link,:note)
         end
+
 
 
 end

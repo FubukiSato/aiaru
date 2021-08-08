@@ -1,15 +1,18 @@
 <div class="content-new">
- <h1>アルバイトの登録内容の編集と削除</h1>
-    <%= form_for(@work, url: {controller: 'post', action: 'update' }, method: :post) do |f| %>
+ <h1>アルバイト募集内容の編集/削除</h1>
 
-    <% if @work.image.present? %>
-      <%= image_tag @work.image.url, id: :img_prev %>
-    <% else %>
-      <%= image_tag 'sample.jpg', id: :img_prev %>
-    <% end %>
-    <%= f.label :image , "画像を選択して下さい" %><br>
-    <%= f.file_field :image, id: "work_img" %>
+ <%= form_for(@work, url: {controller: 'post', action: 'update' }, method: :post) do |f| %>
 
+    <div class="label">
+      <p>アルバイト画像の編集</p>
+    </div>
+
+    <%= image_tag @work.image.url , id: "img_prev"%>
+
+    <br><%= f.label :image , "画像を選択して下さい" %><br>
+    <%= f.file_field :image, id: "work_img"%>
+    <%= f.hidden_field :image_cache %>
+    
       <script type="text/javascript">
     $(function() {
       function readURL(input) {
@@ -27,43 +30,78 @@
     });
   </script>
 
+          <div class="label">
+            <p>アルバイト内容の編集</p>
+          </div>
 
-        <div class="input-area">
-          <p>
-            <%= f.label :name, "店名" %><br>
-            <%= f.text_field :name %>
-          </p>
-          <p>
-            <%= f.label :occupation, "職種" %><br>
-            <%= f.text_field :occupation %>
-          </p>
-          <p>
-            <%= f.label :wage, "時給" %><br>
-            <%= f.number_field :wage %>
-          </p>
-          <p>
-            <%= f.label :hours, "勤務時間" %><br>
-            <%= f.text_area :hours %>
-          </p>
-          <p>
-            <%= f.label :location, "勤務地" %><br>
-            <%= f.text_field :location %>
-          </p>
-          <p>
-            <%= f.label :period, "勤務期間" %><br>
-            <%= f.text_field :period %>
-          </p>
-          <p>
+        
+          <div class="cp_iptxt">
+            <%= f.label :name, "店名",class: "label-mini" %><br>
+            <label class="ef">
+            <%= f.text_field :name ,placeholder: "店名"%>
+            </label>
+          </div>
+
+          
+            <div class="cp_iptxt">
+              <%= f.label :occupation, "職種",class: "label-mini"%><br>
+              <label class="ef">
+              <%= f.text_field :occupation ,placeholder: "職種" %>
+              </label>
+            </div>
+
+          
+            <div class="cp_iptxt">
+              <%= f.label :wage, "時給",class: "label-mini" %><br>
+              <label class="ef">
+              <%= f.number_field :wage ,placeholder: "時給" %>
+              </label>
+            </div>
+
+          
+            <div class="cp_iptxt">
+              <%= f.label :hours, "勤務時間",class: "label-mini" %><br>
+              <label class="ef">
+              <%= f.text_area :hours ,placeholder: "勤務時間" %>
+              </label>
+            </div>
+
+            <div class="cp_iptxt">
+              <%= f.label :location, "勤務地" %><br>
+              <label class="ef">
+              <%= f.text_field :location ,placeholder: "勤務地" %>
+              </label>
+            </div>
+
+            <div class="cp_iptxt">
+              <%= f.label :period, "勤務期間" %><br>
+              <label class="ef">
+              <%= f.text_field :period ,placeholder: "勤務期間" %>
+            </label>
+          </div>
+
+          <div class="cp_iptxt">
             <%= f.label :link, "ホームページリンク" %><br>
-            <%= f.text_field :link %>
-          </p>
-          <p>
+            <label class="ef">
+            <%= f.text_field :link ,placeholder: "ホームページリンク" %>
+            </label>
+          </div>
+
+          <div class="cp_iptxt">
             <%= f.label :note, "備考" %><br>
-            <%= f.text_area :note %>
-          </p>
-            <%= f.submit "登録する"%>
-        </div>
-        <%= link_to("アルバイトの削除","/post/deleteconfirm")%>
+            <label class="ef">
+            <%= f.text_area :note ,placeholder: "備考" %>
+            </label>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "編集を完了する",class: 'btn'%>
+          </div>
+
+          <div class="actions">
+            <%= link_to("アルバイトの募集を削除する","/post/deleteconfirm",class: 'btn')%>
+          </div>
+
   <% end %>
 </div>
 
