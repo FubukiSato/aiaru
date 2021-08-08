@@ -121,7 +121,7 @@
 .content-new .actions{
     text-align: center;
     margin-top: 10%;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
 }
 
 .cp_iptxt input[type='text']{
@@ -134,4 +134,28 @@
 
 .cp_iptxt textarea{
     color: black;
+}
+
+.deleteaction{
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 13px;
+    height: 35px;
+    width: 80%;
+    background-color: red;
+    border-color: red;
+    margin-bottom: 20%;
+    line-height: 35px;
+    opacity: 0.9;
+}
+
+.deleteaction:hover{
+    opacity: 1.0;
+    transition: 1.0s ;
+}
+
+.deleteaction a{
+    color: white;
+    display: block;
 }

@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   post 'post/update' => 'post#update'
   post 'post/createconfirm' => 'post#createconfirm'
   
-
   get 'home' => 'home#top'
 
   root to: "home#top"
