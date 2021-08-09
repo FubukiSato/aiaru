@@ -1,8 +1,15 @@
+<div class="home-contents">
 <h1>新着アルバイト</h1>
 
 <% @work.each do |work| %>
 
-<%= work.name %>
+<div class="ptj-content">
+<%= work.name %><br>
+<%= image_tag work.image.url , class: "img-prev"%><br>
+<%= "#{work.wage}円" %><br>
+<%= work.location %><br>
+</div>
 
 <% end %>
+</div>
 
