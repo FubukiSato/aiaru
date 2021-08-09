@@ -144,6 +144,7 @@
     height: 35px;
     width: 80%;
     background-color: red;
+    box-shadow: 1px 1px ;
     border-color: red;
     margin-bottom: 20%;
     line-height: 35px;
@@ -153,6 +154,11 @@
 .deleteaction:hover{
     opacity: 1.0;
     transition: 1.0s ;
+}
+
+.deleteaction:active{
+    box-shadow: -1px -1px;
+    transition:0s;
 }
 
 .deleteaction a{
