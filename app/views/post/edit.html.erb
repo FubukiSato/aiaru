@@ -99,7 +99,7 @@
           </div>
 
           <div class="deleteaction">
-            <%= link_to("アルバイトの募集を削除する","/post/deleteconfirm",class: 'delete-btn')%>
+            <%= link_to("アルバイトの募集を削除する","/post/delete", data: { confirm: '本当にアルバイトの募集を削除してもよろしいですか？'},class: 'delete-btn')%>
           </div>
 
   <% end %>
