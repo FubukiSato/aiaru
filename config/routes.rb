@@ -6,18 +6,22 @@ Rails.application.routes.draw do
   devise_scope :user do
     get 'users/sign_out' => 'devise/sessions#destroy'
   end
+
+  root to: "home#top"
+
+  get 'home' => 'home#top'
   
   get 'post/new' => 'post#new'
   get 'post/edit' => 'post#edit'
   get 'post/delete' => 'post#delete'
-  get 'post/deleteconfirm' => 'post#deleteconfirm'
+  
   post 'post/create' => 'post#create'
   post 'post/update' => 'post#update'
   post 'post/createconfirm' => 'post#createconfirm'
   
-  get 'home' => 'home#top'
+  
 
-  root to: "home#top"
+  
 
   
  

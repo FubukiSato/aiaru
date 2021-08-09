@@ -64,17 +64,14 @@ class PostController < ApplicationController
         end
     end
 
-    def deleteconfirm
-        @work = Work.find_by(user_id: current_user.id)
-    end
-
     def delete
         @work = Work.find_by(user_id: current_user.id)
         if @work.destroy
             flash[:notice] = "アルバイトの募集を削除しました"
             redirect_to("/home");
         else
-            render 'deleteconfirm'
+            flash[:notice] = "アルバイトの削除に失敗しました"
+            redirect_to("/home")
         end
     end
 
