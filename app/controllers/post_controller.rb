@@ -11,7 +11,7 @@ class PostController < ApplicationController
     end
 
     def create
-        @work = Work.new(name: session[:name],occupation: session[:occupation],wage: session[:wage],hours: session[:hours],wage: session[:wage],hours: session[:hours],location: session[:location],period: session[:period],link: session[:link],note: session[:note])
+        @work = Work.new(name: session[:name],occupation: session[:occupation],wage: session[:wage],hours: session[:hours],wage: session[:wage],hours: session[:hours],location: session[:location],period: session[:period],link: session[:link],note: session[:note],tel: session[:tel],email: session[:email])
         @work.user_id = current_user.id
         @work.image.retrieve_from_cache!(session[:image_cache_name])
         if @work.save
@@ -25,6 +25,8 @@ class PostController < ApplicationController
             session[:period] = nil
             session[:link] = nil
             session[:note] = nil
+            session[:email] = nil
+            session[:tel] = nil
             redirect_to("/home")
         else
             render 'new'
@@ -42,6 +44,8 @@ class PostController < ApplicationController
         session[:period] = params[:work][:period]
         session[:link] = params[:work][:link]
         session[:note] = params[:work][:note]
+        session[:email] = params[:work][:email]
+        session[:tel] = params[:work][:tel]
     end
 
     def edit
@@ -77,9 +81,7 @@ class PostController < ApplicationController
 
     private
         def work_params
-            params.require(:work).permit(:image,:image_cache,:name,:occupation,:wage,:hours,:location,:period,:link,:note)
+            params.require(:work).permit(:image,:image_cache,:name,:occupation,:wage,:hours,:location,:period,:link,:note,:tel,:email)
         end
-
-
 
 end

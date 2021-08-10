@@ -52,7 +52,7 @@
 
           
             <div class="cp_iptxt">
-              <%= f.label :wage, "時給",class: "label-mini" %><br>
+              <%= f.label :wage, "時給(円)",class: "label-mini" %><br>
               <label class="ef">
               <%= f.number_field :wage ,placeholder: "時給" %>
               </label>
@@ -84,6 +84,20 @@
             <%= f.label :link, "ホームページリンク" %><br>
             <label class="ef">
             <%= f.text_field :link ,placeholder: "ホームページリンク" %>
+            </label>
+          </div>
+
+          <div class="cp_iptxt">
+            <%= f.label :tel, "連絡先電話番号" %><br>
+            <label class="ef">
+            <%= f.number_field :tel ,placeholder: "電話番号" %>
+            </label>
+          </div>
+
+          <div class="cp_iptxt">
+            <%= f.label :email, "連絡先メールアドレス" %><br>
+            <label class="ef">
+            <%= f.email_field :email ,placeholder: "メールアドレス" %>
             </label>
           </div>
 
