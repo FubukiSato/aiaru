@@ -2,7 +2,9 @@
  <h1>アルバイトの登録</h1>
 
  <%= form_for(@work, url: {controller: 'post', action: 'createconfirm' }, method: :post) do |f| %>
-
+    <div class="warning">
+    <p><span>(※)</span>は必須入力です</p>
+    </div>
     <div class="label">
       <p>アルバイト画像の登録</p>
     </div>
@@ -10,7 +12,7 @@
     
     <%= image_tag 'sample.jpg', id: "img_prev"%>
     
-    <br><%= f.label :image , "画像を選択して下さい" %><br>
+    <br><%= f.label :image , "画像を選択して下さい" %><span>(※)</span><br>
     <%= f.file_field :image, id: "work_img"%>
     <%= f.hidden_field :image_cache %>
 
@@ -37,7 +39,7 @@
 
         
           <div class="cp_iptxt">
-            <%= f.label :name, "店名",class: "label-mini" %><br>
+            <%= f.label :name, "店名",class: "label-mini" %><span>(※)</span><br>
             <label class="ef">
             <%= f.text_field :name ,placeholder: "店名"%>
             </label>
@@ -45,7 +47,7 @@
 
           
             <div class="cp_iptxt">
-              <%= f.label :occupation, "職種",class: "label-mini"%><br>
+              <%= f.label :occupation, "職種",class: "label-mini"%><span>(※)</span><br>
               <label class="ef">
               <%= f.text_field :occupation ,placeholder: "職種" %>
               </label>
@@ -53,7 +55,7 @@
 
           
             <div class="cp_iptxt">
-              <%= f.label :wage, "時給(円)",class: "label-mini" %><br>
+              <%= f.label :wage, "時給(円)",class: "label-mini" %><span>(※)</span><br>
               <label class="ef">
               <%= f.number_field :wage ,placeholder: "時給" %>
               </label>
@@ -61,21 +63,21 @@
 
           
             <div class="cp_iptxt">
-              <%= f.label :hours, "勤務時間",class: "label-mini" %><br>
+              <%= f.label :hours, "勤務時間",class: "label-mini" %><span>(※)</span><br>
               <label class="ef">
-              <%= f.text_area :hours ,placeholder: "勤務時間" %>
+              <%= f.text_area :hours ,placeholder: '(例) 17:30 〜 23:00 左記時間帯の3〜5時間' %>
               </label>
             </div>
 
             <div class="cp_iptxt">
-              <%= f.label :location, "勤務地" %><br>
+              <%= f.label :location, "勤務地" %><span>(※)</span><br>
               <label class="ef">
               <%= f.text_field :location ,placeholder: "勤務地" %>
               </label>
             </div>
 
             <div class="cp_iptxt">
-              <%= f.label :period, "勤務期間" %><br>
+              <%= f.label :period, "勤務期間" %><span>(※)</span><br>
               <label class="ef">
               <%= f.text_field :period ,placeholder: "勤務期間" %>
             </label>
@@ -89,14 +91,14 @@
           </div>
 
           <div class="cp_iptxt">
-            <%= f.label :tel, "連絡先電話番号(ハイフン無し)" %><br>
+            <%= f.label :tel, "連絡先電話番号(ハイフン有り)" %><span>(※)</span><br>
             <label class="ef">
             <%= f.number_field :tel ,placeholder: "電話番号" %>
             </label>
           </div>
 
           <div class="cp_iptxt">
-            <%= f.label :email, "連絡先メールアドレス" %><br>
+            <%= f.label :email, "連絡先メールアドレス" %><span>(※)</span><br>
             <label class="ef">
             <%= f.email_field :email ,placeholder: "メールアドレス" %>
             </label>
@@ -105,7 +107,7 @@
           <div class="cp_iptxt">
             <%= f.label :note, "備考" %><br>
             <label class="ef">
-            <%= f.text_area :note ,placeholder: "備考" %>
+            <%= f.text_area :note ,placeholder: "(例) 賄いの有無、制服の貸し出し、従業員割、駐車場、履歴書が必要かどうかなど" %>
             </label>
           </div>
 

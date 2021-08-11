@@ -13,7 +13,11 @@ class PostController < ApplicationController
     def create
         @work = Work.new(name: session[:name],occupation: session[:occupation],wage: session[:wage],hours: session[:hours],wage: session[:wage],hours: session[:hours],location: session[:location],period: session[:period],link: session[:link],note: session[:note],tel: session[:tel],email: session[:email])
         @work.user_id = current_user.id
+
+        if session[:image_cache_name].present?
         @work.image.retrieve_from_cache!(session[:image_cache_name])
+        end
+
         if @work.save
             flash[:notice] = "アルバイトの作成に成功しました"
             session[:image_cache_name] = nil
@@ -29,6 +33,7 @@ class PostController < ApplicationController
             session[:tel] = nil
             redirect_to("/home")
         else
+            flash[:alert] = "アルバイトの登録に失敗しました"
             render 'new'
         end
     end

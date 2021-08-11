@@ -10,8 +10,6 @@ class Work < ApplicationRecord
         validates :hours
         validates :location
         validates :period
-        validates :link
-        validates :note
         validates :email
         validates :tel
       end

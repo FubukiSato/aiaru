@@ -7,8 +7,11 @@
       <p>アルバイト画像</p>
     </div>
 
-    
+    <%if @work.image.url.present? %>
     <%= image_tag @work.image.url , id: "img_prev"%>
+    <%else%>
+    <%= image_tag 'sample.jpg', id: "img_prev"%>
+    <%end%>
 
           <div class="label">
             <p>アルバイト内容</p>
