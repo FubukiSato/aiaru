@@ -192,3 +192,29 @@ input[type="number"]::-webkit-inner-spin-button {
     color: white;
     display: block;
 }
+
+.back-action{
+    text-align: center;
+}
+
+.back-action button{
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 13px;
+    height: 35px;
+    width: 80%;
+    color: white;
+    background-color: #008080;
+    box-shadow: 1px 1px ;
+    border-color: #008080;
+    margin-bottom: 20%;
+    cursor: pointer;
+    line-height: 35px;
+    opacity: 0.9;
+}
+
+button:hover{
+    opacity: 1.0;
+    transition: 1.0s ;
+}
