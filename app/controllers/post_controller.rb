@@ -34,6 +34,10 @@ class PostController < ApplicationController
             redirect_to("/home")
         else
             flash[:alert] = "アルバイトの登録に失敗しました"
+            @work = Work.new(name: session[:name],occupation: session[:occupation],wage: session[:wage],hours: session[:hours],wage: session[:wage],hours: session[:hours],location: session[:location],period: session[:period],link: session[:link],note: session[:note],tel: session[:tel],email: session[:email])
+            if session[:image_cache_name].present?
+                @work.image.retrieve_from_cache!(session[:image_cache_name])
+            end
             render 'new'
         end
     end
@@ -70,7 +74,7 @@ class PostController < ApplicationController
         redirect_to("/home")
         else
         flash[:alert] = "アルバイト内容の更新に失敗しました"
-            render 'update'
+            redirect_to("/home")
         end
     end
 
