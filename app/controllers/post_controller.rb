@@ -69,7 +69,7 @@ class PostController < ApplicationController
         flash[:notice] = "アルバイトの内容を更新しました"
         redirect_to("/home")
         else
-        flash[:notice] = "アルバイト内容の更新に失敗しました"
+        flash[:alert] = "アルバイト内容の更新に失敗しました"
             render 'update'
         end
     end
@@ -80,7 +80,7 @@ class PostController < ApplicationController
             flash[:notice] = "アルバイトの募集を削除しました"
             redirect_to("/home");
         else
-            flash[:notice] = "アルバイトの削除に失敗しました"
+            flash[:alert] = "アルバイトの削除に失敗しました"
             redirect_to("/home")
         end
     end
