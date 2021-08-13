@@ -221,3 +221,12 @@ button:hover{
     opacity: 1.0;
     transition: 1.0s ;
 }
+
+.error_message{
+    color: white;
+    background-color: #da3c41;
+}
+
+.error_message li{
+    list-style: none;
+}
