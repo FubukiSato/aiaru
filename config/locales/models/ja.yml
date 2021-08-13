@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+        work:
+          image: 画像
+          name: 店名
+          occupation: 職種
+          wage: 時給
+          hours: 勤務時間
+          location: 勤務地
+          period: 勤務期間
+          email: 連絡先メールアドレス
+          tel: 連絡先電話番号

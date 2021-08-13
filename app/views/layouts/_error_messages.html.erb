@@ -1,5 +1,5 @@
-<% if @work.errors.any? %>
-<% @work.errors.full_messages.each do |message|%>
+<% if model.errors.any? %>
+<% model.errors.full_messages.each do |message|%>
 <li><%= message %></li>
  <% end %>
  <% end %>
