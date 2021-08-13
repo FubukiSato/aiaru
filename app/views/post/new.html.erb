@@ -3,6 +3,9 @@
 
  <%= form_for(@work, url: {controller: 'post', action: 'createconfirm' }, method: :post) do |f| %>
     <div class="warning">
+
+    <%= render "layouts/error_messages" %>
+
     <p><span>(※)</span>は必須入力です</p>
     </div>
     <div class="label">
