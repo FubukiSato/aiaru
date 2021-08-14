@@ -4,7 +4,8 @@
  <%= form_for(@work, url: {controller: 'post', action: 'createconfirm' }, method: :post) do |f| %>
     <div class="warning">
 
-    <%= render "layouts/error_messages", model: f.object %>
+    <% if @work.errors.any? %>
+    <% end %>
 
     <p><span>(※)</span>は必須入力です</p>
     </div>
@@ -14,7 +15,12 @@
 
     <%= image_tag 'sample.jpg', id: "img_prev"%>
     
-    <br><%= f.label :image , "画像を選択して下さい" %><span>(※)</span><br>
+    <br><span>(※)</span><%= f.label :image , "画像を選択して下さい" %><br>
+    <% if @work.errors.include?(:image) %>
+        <div class="error_message">
+          <p><%= @work.errors.full_messages_for(:image).first %></p>
+        </div>
+    <% end %>
     <%= f.file_field :image, id: "work_img"%>
     <%= f.hidden_field :image_cache %>
 
@@ -40,48 +46,78 @@
           </div>
         
           <div class="cp_iptxt">
-            <%= f.label :name, "店名",class: "label-mini" %><span>(※)</span><br>
+            <span>(※)</span><%= f.label :name, "店名",class: "label-mini" %><br>
             <label class="ef">
             <%= f.text_field :name ,placeholder: "店名"%>
             </label>
+            <% if @work.errors.include?(:name) %>
+            <div class="error_message">
+              <p><%= @work.errors.full_messages_for(:name).first %></p>
+            </div>
+            <% end %>
           </div>
 
           
             <div class="cp_iptxt">
-              <%= f.label :occupation, "職種",class: "label-mini"%><span>(※)</span><br>
+              <span>(※)</span><%= f.label :occupation, "職種",class: "label-mini"%><br>
               <label class="ef">
               <%= f.text_field :occupation ,placeholder: "職種" %>
               </label>
+              <% if @work.errors.include?(:occupation) %>
+              <div class="error_message">
+                <p><%= @work.errors.full_messages_for(:occupation).first %></p>
+              </div>
+            <% end %>
             </div>
 
           
             <div class="cp_iptxt">
-              <%= f.label :wage, "時給(円)",class: "label-mini" %><span>(※)</span><br>
+              <span>(※)</span><%= f.label :wage, "時給",class: "label-mini" %><br>
               <label class="ef">
-              <%= f.number_field :wage ,placeholder: "時給" %>
+              <%= f.number_field :wage ,placeholder: "時給(円)" %>
               </label>
+              <% if @work.errors.include?(:wage) %>
+                <div class="error_message">
+                  <p><%= @work.errors.full_messages_for(:wage).first %></p>
+                </div>
+              <% end %>
             </div>
 
           
             <div class="cp_iptxt">
-              <%= f.label :hours, "勤務時間",class: "label-mini" %><span>(※)</span><br>
+              <span>(※)</span><%= f.label :hours, "勤務時間",class: "label-mini" %><br>
               <label class="ef">
               <%= f.text_area :hours ,placeholder: '(例) 17:30 〜 23:00 左記時間帯の3〜5時間' %>
               </label>
+              <% if @work.errors.include?(:hours) %>
+                <div class="error_message">
+                  <p><%= @work.errors.full_messages_for(:hours).first %></p>
+                </div>
+            <% end %>
             </div>
 
             <div class="cp_iptxt">
-              <%= f.label :location, "勤務地" %><span>(※)</span><br>
+              <span>(※)</span><%= f.label :location, "勤務地" %><br>
               <label class="ef">
               <%= f.text_field :location ,placeholder: "勤務地" %>
               </label>
+              <% if @work.errors.include?(:location) %>
+              <div class="error_message">
+                <p><%= @work.errors.full_messages_for(:location).first %></p>
+              </div>
+            <% end %>
             </div>
 
             <div class="cp_iptxt">
-              <%= f.label :period, "勤務期間" %><span>(※)</span><br>
+              <span>(※)</span><%= f.label :period, "勤務期間" %><br>
               <label class="ef">
               <%= f.text_field :period ,placeholder: "勤務期間" %>
             </label>
+            <% if @work.errors.include?(:period) %>
+            <div class="error_message">
+              <p><%= @work.errors.full_messages_for(:period).first %></p>
+            </div>
+            <% end %>
           </div>
 
           <div class="cp_iptxt">
@@ -92,17 +128,27 @@
           </div>
 
           <div class="cp_iptxt">
-            <%= f.label :tel, "連絡先電話番号(ハイフン無し)" %><span>(※)</span><br>
+            <span>(※)</span><%= f.label :tel, "連絡先電話番号(ハイフン無し)" %><br>
             <label class="ef">
             <%= f.number_field :tel ,placeholder: "電話番号" %>
             </label>
+            <% if @work.errors.include?(:tel) %>
+            <div class="error_message">
+              <p><%= @work.errors.full_messages_for(:tel).first %></p>
+            </div>
+            <% end %>
           </div>
 
           <div class="cp_iptxt">
-            <%= f.label :email, "連絡先メールアドレス" %><span>(※)</span><br>
+            <span>(※)</span><%= f.label :email, "連絡先メールアドレス" %><br>
             <label class="ef">
             <%= f.email_field :email ,placeholder: "メールアドレス" %>
             </label>
+            <% if @work.errors.include?(:email) %>
+            <div class="error_message">
+              <p><%= @work.errors.full_messages_for(:email).first %></p>
+            </div>
+            <% end %>
           </div>
 
           <div class="cp_iptxt">

@@ -223,8 +223,12 @@ button:hover{
 }
 
 .error_message{
-    color: white;
-    background-color: #da3c41;
+    background-color: #FFC0CB;
+    color: brown;
+}
+
+.error_message p{
+    font-size: 0.7rem;
 }
 
 .error_message li{
