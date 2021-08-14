@@ -70,7 +70,7 @@ class PostController < ApplicationController
         redirect_to("/home")
         else
         flash[:alert] = "アルバイト内容の更新に失敗しました"
-        redirect_to("/home")
+        render("edit")
         end
     end
 
