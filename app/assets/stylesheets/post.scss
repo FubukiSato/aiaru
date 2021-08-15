@@ -234,3 +234,44 @@ button:hover{
 .error_message li{
     list-style: none;
 }
+
+
+
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+
+    .content-new h1{
+        font-size: 20px;
+    }
+
+    .content-new{
+        margin-left: 15%;
+        margin-right: 15%;
+        height: auto;
+        background-color: white;
+    }
+
+    .deleteaction{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    .content-new h1{
+        font-size: 20px;
+    }
+
+    .content-new{
+        margin-left: 10%;
+        margin-right: 10%;
+        height: auto;
+        background-color: white;
+    }
+
+    .deleteaction{
+        width: 90%;
+    }
+}

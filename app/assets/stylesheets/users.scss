@@ -1,8 +1,7 @@
-.alert{
-    color: red;
-    width: 100%;
-    text-align: center;
-}
+:root {
+    --fontsize: 20px;
+    --fontlinksize: 15px;
+  }
 
 body{
     margin: 0;
@@ -54,13 +53,13 @@ h2{
 }
 
 input[type="email"]{
-    font-size: 20px;
+    font-size: var(--fontsize);
     width: 80%;
     height: 35px;
 }
 
 input[type="password"]{
-    font-size: 20px;
+    font-size: var(--fontsize);
     width: 80%;
     height: 35px;
 }
@@ -90,6 +89,7 @@ input[type="password"]{
 
 .link{
     color: blue;
+    font-size: var(--fontlinksize);
 }
 
 #error_explanation{
@@ -108,7 +108,44 @@ input[type="password"]{
 
 #error_explanation li{
     margin: 0 auto;
-    font-size: 15px;
+    font-size: var(--fontsize);
 }
 
 
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    :root {
+        --fontsize: 20px;
+        --fontlinksize: 15px;
+      }
+}
+
+
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    :root {
+        --fontsize: 20px;
+        --fontlinksize: 15px;
+      }
+
+    .contents{
+          width: 90%;
+      }
+
+    input[type="email"]{
+        width: 90%;
+    }
+    
+    input[type="password"]{
+        width: 90%;
+    }
+    
+    .btn{
+        width: 90%;
+    }
+
+    #error_explanation li{
+        font-size: 13px;
+    }
+}

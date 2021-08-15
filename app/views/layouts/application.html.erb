@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Aiaru</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -18,6 +18,39 @@
       <h1>
       <a href="/home">Aiaru</a>
       </h1>
+
+<div id="hamburger">
+  <div class="icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+      <nav class="sm-nav">
+      <ul>
+      <%if user_signed_in? %>
+
+      <li><a href="/post/new">バイトを募集する</a></li>
+
+      <li><a href="/post/edit">バイト募集内容の編集と削除</a></li>
+
+      <li><a href="#">その他</a></li>
+
+      <li><a href="/users/sign_out">ログアウト</a></li>
+
+      <%else%>
+      <li><a href="/users/sign_in">ログイン</a></li>
+      <li><a href="/users/sign_up">新規登録</a></li>
+      <%end%>
+      </ul>
+      </nav>
+
+
+
+
+
+
       <nav class="pc-nav">
       <ul>
       <%if user_signed_in? %>
@@ -51,5 +84,14 @@
     
     <footer>© 2020 Aiaru</footer>
   </div>
+
+<script>
+  $('#hamburger').on('click', function(){
+      $('.icon').toggleClass('close');
+      $('.sm-nav').slideToggle();
+  });
+</script>
+
+
 </body>
 </html>
