@@ -5,10 +5,9 @@
 <% @work.each do |work| %>
 
 <div class="ptj-content">
-<p><%= work.name %></p>
-<%= image_tag work.image.url , class: "img-prev"%><br>
-<%= "#{work.wage}円" %><br>
-<%= work.location %><br>
+
+<%= image_tag work.image.url , class: "img-prev"%>
+
 </div>
 
 <% end %>
