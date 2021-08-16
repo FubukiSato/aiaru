@@ -8,18 +8,45 @@
     margin-right: 20%;
 }
 
-.home-contents h1{
-    color: #f4a460;
-    margin-bottom: 5%;
-    
+.home-contents h2{
+    margin-left: 0;
+    border-left: 4px solid #008080;
 }
 
-.img-prev{
-    width: 170px;
-    height: 170px;
+.home-contents .label{
+    width: 20%;
+    margin-bottom: 5%;
 }
 
 .ptj-content{
     background-color: #EEEEEE;
     margin-bottom: 10%;
+    height: 190px;
+    display: flex;
+}
+
+.ptj-content p.name{
+    margin-top: 7px;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ptj-content .occupation{
+    margin-top: 5px;
+}
+
+.right-content{
+    margin-left: 10px;
+}
+
+.content-detail{
+    border-left: 2px solid #008080;
+}
+
+.img-prev{
+    width: 190px;
+    height: 190px;
+    padding: 7px;
+    line-height: 176px;
 }
