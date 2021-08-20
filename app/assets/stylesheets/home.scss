@@ -21,7 +21,6 @@
 .ptj-content{
     background-color: #EEEEEE;
     margin-bottom: 10%;
-    
     display: flex;
 }
 
@@ -43,21 +42,27 @@
 
 .right-content{
     margin-left: 10px;
+    width: 100%;
 }
 
 .content-detail{
     border-left: 2px solid #008080;
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
 }
 
 .content-detail p{
-    margin-left: 5px;
+    margin: 5px 0 0 0;
+    
 }
 
 .img-prev{
     width: 190px;
     height: 190px;
     padding: 7px;
-    line-height: 176px;
 }
 @media screen and (max-width: 959px) {
     .home-contents{
