@@ -1,7 +1,6 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
 .home-contents{
     margin-top: 4%;
     margin-left: 20%;
@@ -31,10 +30,6 @@
     font-weight: bold;
 }
 
-.ptj-content .occupation{
-    margin-top: 5px;
-}
-
 .ptj-content .hours{
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -46,17 +41,20 @@
 }
 
 .content-detail{
-    border-left: 2px solid #008080;
     width: 100%;
-    display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.content-detail div{
+    border-left: 2px solid #008080;
+    width: 33%;
+    text-align: center;
 }
 
 .content-detail p{
-    margin: 5px 0 0 0;
-    
+    margin-top: 8px;
 }
 
 .img-prev{
@@ -64,6 +62,17 @@
     height: 190px;
     padding: 7px;
 }
+
+.occupation{
+  
+    width: 33%;
+}
+
+.wage{
+    
+    width: 33%;
+}
+
 @media screen and (max-width: 959px) {
     .home-contents{
         margin-left: 3%;
