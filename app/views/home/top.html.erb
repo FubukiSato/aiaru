@@ -6,8 +6,12 @@
 
     <% @work.each do |work| %>
 
-        <div class="ptj-content">
+                <div class="time">
+                <p>掲載日: <%= work.created_at.strftime('%Y/%m/%d') %></p>
+                </div>
 
+        <div class="ptj-content">
+            
             <%= image_tag work.image.url , class: "img-prev"%>
                 <div class="right-content">
 
@@ -15,22 +19,22 @@
                     <div class="content-detail">
 
                         <div class="occupation">
-                            <p>仕事内容<br> <%= work.occupation %></p>
+                            <p><span>仕事内容</span><br> <%= work.occupation %></p>
                         </div>
 
                         <div class="location">
-                            <p>勤務地<br> <%= work.location %></p>
+                            <p><span>勤務地</span><br> <%= work.location %></p>
                         </div>
-                        
+
                         <div class="wage">
-                            <p>時給<br> <%= work.wage %>円</p>
+                            <p><span>時給</span><br> <%= work.wage %>円</p>
                         </div>
 
                     </div>
 
                 </div>
-
+                
         </div>
-
+    
     <% end %>
 </div>
