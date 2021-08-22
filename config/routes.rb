@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   root to: "home#top"
 
+
+
   get 'home' => 'home#top'
+  get 'home/detail/:id' => 'home#detail'
   
   get 'post/new' => 'post#new'
   get 'post/edit' => 'post#edit'

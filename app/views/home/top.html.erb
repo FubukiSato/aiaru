@@ -12,10 +12,10 @@
 
         <div class="ptj-content">
             
-            <%= image_tag work.image.url , class: "img-prev"%>
+            <%= link_to image_tag(work.image.url , class: "img-prev"), "/home/detail/#{work.user_id}" %>
                 <div class="right-content">
 
-                    <p class="name"><%= work.name %></p>
+                    <p class="name"><%= link_to(work.name , "/home/detail/#{work.user_id}") %></p>
                     <div class="content-detail">
 
                         <div class="occupation">
