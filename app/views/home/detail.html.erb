@@ -1,2 +1,12 @@
 アルバイト詳細ページ
-<%= @work.name %>
+<%= image_tag @work.image.url , id: "img_prev"%>
+<%= @work.name%>
+<%= @work.occupation %>
+<%= @work.wage%>
+<%= @work.hours %>
+<%= @work.location %>
+<%= @work.period %>
+<%= @work.link %>
+<%= @work.tel %>
+<%= @work.email %>
+<%= @work.note %>

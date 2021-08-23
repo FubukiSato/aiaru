@@ -4,14 +4,15 @@ class HomeController < ApplicationController
         @work = Work.order("created_at DESC")
 
         
-        #   limit = work.updated_at
-           # limit.to_date
-           # limit = limit + 10
-           # now = Time.now
-           # if now.after? limit
-           #     work.destroy
-           # end
-       # end
+        #@work.each do |work|
+         #   limit = work.updated_at
+         #   limit.to_date
+         #   limit = limit + 1
+         #   now = Time.now
+         #   if now.after? limit
+         #       work.destroy
+        #    end
+        #end
 
         #@work = Work.order("created_at DESC")
         
