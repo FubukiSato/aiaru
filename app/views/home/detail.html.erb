@@ -1,12 +1,20 @@
-アルバイト詳細ページ
-<%= image_tag @work.image.url , id: "img_prev"%>
-<%= @work.name%>
-<%= @work.occupation %>
-<%= @work.wage%>
-<%= @work.hours %>
-<%= @work.location %>
-<%= @work.period %>
-<%= @work.link %>
-<%= @work.tel %>
-<%= @work.email %>
-<%= @work.note %>
+<div class="content-new">
+    <h1>アルバイト詳細ページ</h1>
+
+    <div class="label">
+      <p>アルバイト詳細</p>
+    </div>
+
+
+    <%= image_tag @work.image.url , id: "img_prev"%>
+    <%= @work.name%>
+    <%= @work.occupation %>
+    <%= @work.wage%>
+    <%= @work.hours %>
+    <%= @work.location %>
+    <%= @work.period %>
+    <%= @work.link %>
+    <%= @work.tel %>
+    <%= @work.email %>
+    <%= @work.note %>
+</div>
