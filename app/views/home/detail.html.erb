@@ -1,100 +1,103 @@
 <div class="content-new">
     <h1>アルバイト詳細ページ</h1>
 
+<div class="detail-wrapper">
     <div class="label">
       <p>アルバイト詳細</p>
     </div>
 
     <%= image_tag @work.image.url , id: "img_prev"%>
 
-    <div class="inf inf1">
+    
+    <div class="inf">
         <div class="inf-left">
             <i class="fas fa-store fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.name%>
+            <p><%= @work.name%></p>
         </div>
     </div>
 
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="fas fa-briefcase fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.occupation %>
+            <p><%= @work.occupation %></p>
         </div>
     </div>
 
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="fas fa-yen-sign fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.wage%>
+            <p><%= @work.wage%>円</p>
         </div>
     </div>
 
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="far fa-clock fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.hours %>
+            <p><%= @work.hours %></p>
         </div>
     </div>
 
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="fas fa-map-marker-alt fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.location %>
+            <p><%= @work.location %></p>
         </div>
     </div>
 
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="far fa-calendar-alt fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.period %>
+            <p><%= @work.period %></p>
         </div>
     </div>
 
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="fas fa-link fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.link %>
+            <p><%= @work.link %></p>
         </div>
     </div>
     
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="fas fa-phone fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.tel %>
+            <p><%= @work.tel %></p>
         </div>
     </div>
     
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="far fa-envelope fa-lg"></i>
         </div>
         <div class="inf-right">
-            <%= @work.email %>
+            <p><%= @work.email %></p>
         </div>
     </div>
     
-    <div class="inf inf1">
+    <div class="inf">
         <div class="inf-left">
             <i class="far fa-clipboard fa-lg"></i>
         </div>
-        <div class="inf-right">
-            <%= @work.note %>
+        <div class="inf-right inf-textarea">
+            <p><%= @work.note %></p>
         </div>
+    </div>
     </div>
     
 </div>
