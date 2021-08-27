@@ -130,11 +130,39 @@
 
 @media screen and (max-width: 959px) {
     .home-contents{
-        margin-left: 3%;
-        margin-right: 3%;
+        margin-left: 10%;
+        margin-right: 10%;
+        //width: 100%;
+    }
+
+    .ptj-content{
+        background-color: #EEEEEE;
+        margin-bottom: 10%;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .content-detail{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+
+    .content-detail div{
+        border-left: none;
+        border-bottom: 2px solid #008080;
         width: 100%;
     }
-}
 
-@media screen and (max-width: 480px) {
+    .right-content{
+        margin-left: 0;
+    }
+
+    .img-prev{
+        margin-top: 5%;
+    }
+
 }
