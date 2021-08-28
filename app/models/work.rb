@@ -1,4 +1,6 @@
 class Work < ApplicationRecord
+  belongs_to :user
+
     attr_accessor :image_cache
     mount_uploader :image , ImageUploader
 
