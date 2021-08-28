@@ -21,25 +21,27 @@
           <p><%= @work.errors.full_messages_for(:image).first %></p>
         </div>
     <% end %>
-    <%= f.file_field :image, id: "work_img"%>
+    <%= f.file_field :image, id: "work_img", accept: "image/*"%>
     <%= f.hidden_field :image_cache %>
 
-      <script type="text/javascript">
-    $(function() {
-      function readURL(input) {
-          if (input.files && input.files[0]) {
-          var reader = new FileReader();
-          reader.onload = function (e) {
-      $('#img_prev').attr('src', e.target.result);
+      <script>
+        window.onload = function() {
+          work_img.value = '';
+        };
+
+        $(function() {
+          function readURL(input) {
+              if (input.files && input.files[0]) {
+              var reader = new FileReader();
+              reader.onload = function (e) { $('#img_prev').attr('src', e.target.result); }
+              reader.readAsDataURL(input.files[0]);
+              }
           }
-          reader.readAsDataURL(input.files[0]);
-          }
-      }
-      $("#work_img").change(function(){
-          readURL(this);
-      });
-    });
-  </script>
+          $("#work_img").change(function(){
+              readURL(this);
+          });
+        });
+      </script>
 
           <div class="label">
             <p>アルバイト内容の登録</p>
@@ -128,9 +130,9 @@
           </div>
 
           <div class="cp_iptxt">
-            <span>(※)</span><%= f.label :tel, "連絡先電話番号(ハイフン無し)" %><br>
+            <span>(※)</span><%= f.label :tel, "連絡先電話番号(ハイフン有り)" %><br>
             <label class="ef">
-            <%= f.number_field :tel ,placeholder: "電話番号" %>
+            <%= f.text_field :tel ,placeholder: "000-0000-0000 etc.." %>
             </label>
             <% if @work.errors.include?(:tel) %>
             <div class="error_message">
