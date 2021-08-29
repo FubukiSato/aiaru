@@ -1,8 +1,6 @@
 class PostController < ApplicationController
     before_action :authenticate_user!
 
-    helper_method :image_delete
-
     def new
         if Work.find_by(user_id: current_user.id).present?
             flash[:notice] = "申し訳ありません。アルバイトの登録は1アカウントにつき一つまでです。"
@@ -85,10 +83,6 @@ class PostController < ApplicationController
             flash[:alert] = "アルバイトの削除に失敗しました"
             redirect_to("/home")
         end
-    end
-
-    def image_delete
-        session[:image] = nil
     end
 
     private

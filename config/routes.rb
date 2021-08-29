@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   
   get 'post/new' => 'post#new'
   get 'post/edit' => 'post#edit'
+
+# get 'post/edit/:id' => 'post#edit'
+
   get 'post/delete' => 'post#delete'
   
   post 'post/create' => 'post#create'
