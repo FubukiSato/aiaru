@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'post/new' => 'post#new'
   get 'post/edit' => 'post#edit'
 
-# get 'post/edit/:id' => 'post#edit'
+  get 'admin/post/admin_delete/:id' => 'admin/post#admin_delete'
 
   get 'post/delete' => 'post#delete'
   

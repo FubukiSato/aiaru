@@ -125,7 +125,7 @@
           <div class="cp_iptxt">
             <%= f.label :tel, "連絡先電話番号" %><br>
             <label class="ef">
-            <%= f.number_field :tel ,placeholder: "電話番号" %>
+            <%= f.text_field :tel ,placeholder: "電話番号" %>
             </label>
             <% if @work.errors.include?(:tel) %>
             <div class="error_message">

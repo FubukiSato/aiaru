@@ -10,6 +10,13 @@
                 <p>掲載日: <%= work.created_at.strftime('%Y/%m/%d') %></p>
                 </div>
 
+                <div class="admin_edit_delete">
+                <%if user_signed_in? && current_user.admin?  %>
+                <%= link_to("削除","/admin/post/admin_delete/#{work.id}",data: { confirm: '本当にアルバイトの募集を削除してもよろしいですか？'}) %>
+                <%end%>
+                </div>
+        
+
         <div class="ptj-content">
             
             <%= link_to image_tag(work.image.url , class: "img-prev"), "/home/detail/#{work.user_id}" %>

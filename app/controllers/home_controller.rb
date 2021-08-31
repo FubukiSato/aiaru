@@ -15,7 +15,7 @@ class HomeController < ApplicationController
         end
 
         @work = Work.order("created_at DESC")
-        
+
     end
 
     def detail

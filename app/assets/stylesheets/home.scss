@@ -79,7 +79,7 @@
     width: 33%;
 }
 
-.inf, .inf-left{
+.inf, .inf-left, .inf-right{
     display: flex;
 }
 
@@ -110,7 +110,7 @@
 }
 
 .inf-textarea{
-    white-space: pre;
+    white-space: pre-wrap;
 }
 
 .content-new{
@@ -125,6 +125,10 @@
 .detail_image_wrapper{
     text-align: center;
     margin-bottom: 10%;
+}
+
+.admin_edit_delete{
+    text-align: right;
 }
 
 @media screen and (max-width: 959px) {
