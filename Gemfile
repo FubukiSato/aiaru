@@ -68,3 +68,5 @@ gem 'pry-rails'
 gem 'fog-aws'
 
 gem 'dotenv-rails'
+
+gem 'rufo'
