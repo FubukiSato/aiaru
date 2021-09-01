@@ -47,6 +47,13 @@ header {
     border-bottom: 2px solid #008080;
 }
 
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  flex: 1;
+}
+
 h1{
     margin: 0; padding: 0;
     font-size: 30px;
@@ -103,8 +110,6 @@ h1{
    background-color: #f08080;
  }
 
- 
-
  footer{
     width: 100%;
     text-align: center;
@@ -112,12 +117,7 @@ h1{
     margin-top: auto;
  }
 
- #wrapper{
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
-   flex: 1;
- }
+
 
  @media screen and (max-width: 959px) {
 	/* タブレット&スマホ  */
@@ -174,7 +174,7 @@ h1{
       position: absolute; /*絶対配置 top leftからの位置を絶対配置する*/
       z-index: 10;
       width: 100%;
-      background-color: rgba(240,255,240,1.0);
+      background-color: rgb(255, 255, 255);
     }
 
     .sm-nav ul {
@@ -184,10 +184,15 @@ h1{
 
     .sm-nav li{
        text-align: center;
-       border-bottom: 2px solid white;
        margin-left: 0;
        height: 50px;
        line-height: 50px;
+       display: block;
+       opacity: 0.8;
+    }
+
+    .sm-nav li:hover{
+      opacity: 1.0;
     }
 
     .sm-nav a {
