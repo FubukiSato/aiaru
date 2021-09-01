@@ -1,4 +1,4 @@
-<div class="content-new">
+<div class="content_new">
  <h1>アルバイト募集内容の編集/削除</h1>
 
  <%= form_for(@work, url: {controller: 'post', action: 'update' }, method: :post) do |f| %>
@@ -41,7 +41,7 @@
 
         
           <div class="cp_iptxt">
-            <%= f.label :name, "店名",class: "label-mini" %><br>
+            <%= f.label :name, "店名",class: "label_mini" %><br>
             <label class="ef">
             <%= f.text_field :name ,placeholder: "店名"%>
             </label>
@@ -54,7 +54,7 @@
 
           
             <div class="cp_iptxt">
-              <%= f.label :occupation, "職種",class: "label-mini"%><br>
+              <%= f.label :occupation, "職種",class: "label_mini"%><br>
               <label class="ef">
               <%= f.text_field :occupation ,placeholder: "職種" %>
               </label>
@@ -67,7 +67,7 @@
 
           
             <div class="cp_iptxt">
-              <%= f.label :wage, "時給(円)",class: "label-mini" %><br>
+              <%= f.label :wage, "時給(円)",class: "label_mini" %><br>
               <label class="ef">
               <%= f.number_field :wage ,placeholder: "時給" %>
               </label>
@@ -80,7 +80,7 @@
 
           
             <div class="cp_iptxt">
-              <%= f.label :hours, "勤務時間",class: "label-mini" %><br>
+              <%= f.label :hours, "勤務時間",class: "label_mini" %><br>
               <label class="ef">
               <%= f.text_area :hours ,placeholder: "勤務時間" %>
               </label>
@@ -158,7 +158,7 @@
           </div>
 
           <div class="deleteaction">
-            <%= link_to("アルバイトの募集を削除する","/post/delete", data: { confirm: '本当にアルバイトの募集を削除してもよろしいですか？'},class: 'delete-btn')%>
+            <%= link_to("アルバイトの募集を削除する","/post/delete", data: { confirm: '本当にアルバイトの募集を削除してもよろしいですか？'},class: 'delete_btn')%>
           </div>
 
   <% end %>

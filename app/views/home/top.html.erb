@@ -1,4 +1,4 @@
-<div class="home-contents">
+<div class="home_contents">
 
     <div class="label">
         <p>アルバイト新着</p>
@@ -17,13 +17,13 @@
                 </div>
         
 
-        <div class="ptj-content">
+        <div class="ptj_content">
             
-            <%= link_to image_tag(work.image.url , class: "img-prev"), "/home/detail/#{work.user_id}" %>
-                <div class="right-content">
+            <%= link_to image_tag(work.image.url , class: "img_prev"), "/home/detail/#{work.user_id}" %>
+                <div class="right_content">
 
                     <p class="name"><%= link_to(work.name , "/home/detail/#{work.user_id}") %></p>
-                    <div class="content-detail">
+                    <div class="content_detail">
 
                         <div class="occupation">
                             <p><span>仕事内容</span><br> <%= work.occupation %></p>

@@ -1,14 +1,14 @@
 // Place all the styles related to the post controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.content-new{
+.content_new{
     margin-left: 30%;
     margin-right: 30%;
     height: auto;
-    background-color: white;
+    background-color: #FFFFFF;
 }
 
-.content-new h1{
+.content_new h1{
     padding-top: 20px;
     padding-bottom: 20px;
     margin-top: 10%;
@@ -16,7 +16,7 @@
     text-align: center;
     font-size: 25px;
     font-weight: lighter;
-    color: gray;
+    color: #808080;
 }
 
 .label{
@@ -29,7 +29,7 @@
 }
 
 .label p{
-    color: gray;
+    color: #808080;
     margin: 0;
     padding-left: 20px;
     line-height: 40px;
@@ -40,17 +40,8 @@
     height: auto;
 }
 
-.image-contents{
-    text-align: center;
-}
-
-.image-contents p{
-    padding-bottom: 10px;
-    border-bottom: 2px solid gray;
-}
-
-.content-new span{
-    color: red;
+.content_new span{
+    color: #FF0000;
 }
 
 .cp_iptxt{
@@ -58,7 +49,7 @@
     margin-bottom: 20px;
 }
 
-.label-mini{
+.label_mini{
     font-size: 15px;
 }
 
@@ -69,7 +60,7 @@
 	padding: 0.3em;
 	transition: 0.3s;
 	letter-spacing: 1px;
-	color: #aaaaaa;
+	color: #000000;
 	border: 1px solid #1b2538;
 	border-radius: 4px;
 }
@@ -78,6 +69,10 @@
 	border: 1px solid #da3c41;
 	outline: none;
 	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+
+#work_email{
+    width: 100%;
 }
 
 .ef textarea{
@@ -100,31 +95,14 @@
 	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
 }
 
-.content-new .actions{
+.content_new .actions{
     text-align: center;
     margin-top: 10%;
     margin-bottom: 10%;
 }
 
-.cp_iptxt input[type='text']{
-    color: black;
-}
-
-.cp_iptxt input[type='number']{
-    color: black;
-}
-
-.cp_iptxt input[type='email']{
-    color: black;
-}
-
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
 .cp_iptxt textarea{
-    color: black;
+    color: #000000;
 }
 
 .deleteaction{
@@ -134,9 +112,9 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 13px;
     height: 35px;
     width: 80%;
-    background-color: red;
+    background-color: #FF0000;
     box-shadow: 1px 1px ;
-    border-color: red;
+    border-color: #FF0000;
     margin-bottom: 20%;
     line-height: 35px;
     opacity: 0.9;
@@ -153,22 +131,22 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .deleteaction a{
-    color: white;
+    color: #FFFFFF;
     display: block;
 }
 
-.back-action{
+.back_action{
     text-align: center;
 }
 
-.back-action button{
+.back_action button{
     border-radius: 10px;
     text-align: center;
     margin: 0 auto;
     font-size: 13px;
     height: 35px;
     width: 80%;
-    color: white;
+    color: #FFFFFF;
     background-color: #008080;
     box-shadow: 1px 1px ;
     border-color: #008080;
@@ -185,7 +163,7 @@ button:hover{
 
 .error_message{
     background-color: #FFC0CB;
-    color: brown;
+    color: #8B0000;
 }
 
 .error_message p{
@@ -203,15 +181,15 @@ button:hover{
 @media screen and (max-width: 959px) {
 	/* 959px以下に適用されるCSS（タブレット用） */
 
-    .content-new h1{
+    .content_new h1{
         font-size: 20px;
     }
 
-    .content-new{
+    .content_new{
         margin-left: 15%;
         margin-right: 15%;
         height: auto;
-        background-color: white;
+        background-color: #FFFFFF;
     }
 
     .deleteaction{
@@ -222,15 +200,15 @@ button:hover{
 
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
-    .content-new h1{
+    .content_new h1{
         font-size: 20px;
     }
 
-    .content-new{
+    .content_new{
         margin-left: 10%;
         margin-right: 10%;
         height: auto;
-        background-color: white;
+        background-color: #FFFFFF;
     }
 
     .deleteaction{

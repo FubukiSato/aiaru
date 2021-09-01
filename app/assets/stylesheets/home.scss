@@ -1,85 +1,81 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.home-contents{
+.home_contents{
     margin-top: 4%;
     margin-left: 20%;
     margin-right: 20%;
 }
 
-.home-contents h2{
+.home_contents h2{
     margin-left: 0;
     border-left: 4px solid #008080;
 }
 
-.home-contents .label{
+.home_contents .label{
     width: 100%;
     margin-bottom: 5%;
 }
 
-.ptj-content{
+.ptj_content{
     background-color: #EEEEEE;
     margin-bottom: 10%;
     display: flex;
 }
 
-.ptj-content p.name{
+.ptj_content p.name{
     margin-top: 7px;
     margin-bottom: 0;
     font-size: 20px;
     font-weight: bold;
 }
 
-.ptj-content .hours{
+.ptj_content .hours{
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 
-.right-content{
+.right_content{
     margin-left: 10px;
     width: 100%;
 }
 
-.right-content a{
+.right_content a{
     color: black;
 }
 
-.content-detail{
+.content_detail{
     width: 100%;
     display: flex;
     margin-top: 20px;
     justify-content: space-between;
 }
 
-.content-detail div{
+.content_detail div{
     border-left: 2px solid #008080;
     width: 33%;
     text-align: center;
 }
 
-.content-detail p{
+.content_detail p{
     margin-top: 8px;
 }
 
-.content-detail span{
+.content_detail span{
     font-weight: bolder;
 }
 
-.img-prev{
+.img_prev{
     width: 190px;
     height: 190px;
     padding: 7px;
 }
 
-.occupation{
+.occupation,.wage{
     width: 33%;
 }
 
-.wage{
-    width: 33%;
-}
-
-.inf, .inf-left, .inf-right{
+.inf, .inf_left, .inf_right{
     display: flex;
 }
 
@@ -91,21 +87,21 @@
     flex-direction: row;
 }
 
-.inf-left{
+.inf_left{
     min-width: 10%;
     background-color: #EEEEEE;
     justify-content: center; /*左右中央揃え*/
     align-items: center;     /*上下中央揃え*/
 }
 
-.inf-right{
+.inf_right{
     margin-left: 5%;
     margin-right: 5%;
     justify-content: center; /*左右中央揃え*/
     align-items: center;     /*上下中央揃え*/
 }
 
-.detail-wrapper{
+.detail_wrapper{
     margin-bottom: 20%;
 }
 
@@ -113,7 +109,7 @@
     white-space: pre-wrap;
 }
 
-.content-new{
+.content_new{
     height: 100%; 
 }
 
@@ -132,13 +128,12 @@
 }
 
 @media screen and (max-width: 959px) {
-    .home-contents{
+    .home_contents{
         margin-left: 10%;
         margin-right: 10%;
-        //width: 100%;
     }
 
-    .ptj-content{
+    .ptj_content{
         background-color: #EEEEEE;
         margin-bottom: 10%;
         text-align: center;
@@ -146,7 +141,7 @@
         flex-flow: column;
     }
 
-    .content-detail{
+    .content_detail{
         width: 100%;
         display: flex;
         flex-flow: column;
@@ -154,17 +149,17 @@
         justify-content: space-between;
     }
 
-    .content-detail div{
+    .content_detail div{
         border-left: none;
         border-bottom: 2px solid #008080;
         width: 100%;
     }
 
-    .right-content{
+    .right_content{
         margin-left: 0;
     }
 
-    .img-prev{
+    .img_prev{
         margin-top: 5%;
     }
 
