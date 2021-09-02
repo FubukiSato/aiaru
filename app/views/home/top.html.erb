@@ -18,23 +18,24 @@
         
 
         <div class="ptj_content">
+
+            <p class="name ptj_name"><%= link_to(work.name , "/home/detail/#{work.user_id}") %></p>
             
-            <%= link_to image_tag(work.image.url , class: "img_prev"), "/home/detail/#{work.user_id}" %>
+            
                 <div class="right_content">
 
-                    <p class="name"><%= link_to(work.name , "/home/detail/#{work.user_id}") %></p>
                     <div class="content_detail">
 
-                        <div class="occupation">
+                        <div class="occupation inf_textarea">
                             <p><span>仕事内容</span><br> <%= work.occupation %></p>
                         </div>
 
-                        <div class="location">
+                        <div class="location inf_textarea">
                             <p><span>勤務地</span><br> <%= work.location %></p>
                         </div>
 
-                        <div class="wage">
-                            <p><span>時給</span><br> <%= work.wage %>円</p>
+                        <div class="wage inf_textarea">
+                            <p><span>時給</span><br> <%= work.wage %></p>
                         </div>
 
                     </div>

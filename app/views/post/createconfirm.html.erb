@@ -28,7 +28,7 @@
             <div class="cp_iptxt">
               <%= f.label :occupation, "職種",class: "label_mini"%><br>
               <label class="ef">
-              <%= f.text_field :occupation ,placeholder: "職種",:readonly => true %>
+              <%= f.text_area :occupation ,placeholder: "職種",:readonly => true %>
               </label>
             </div>
 
@@ -36,7 +36,7 @@
             <div class="cp_iptxt">
               <%= f.label :wage, "時給(円)",class: "label_mini" %><br>
               <label class="ef">
-              <%= f.number_field :wage ,placeholder: "時給",:readonly => true%>
+              <%= f.text_area :wage ,placeholder: "時給",:readonly => true%>
               </label>
             </div>
 
@@ -51,14 +51,14 @@
             <div class="cp_iptxt">
               <%= f.label :location, "勤務地" %><br>
               <label class="ef">
-              <%= f.text_field :location ,placeholder: "勤務地",:readonly => true %>
+              <%= f.text_area :location ,placeholder: "勤務地",:readonly => true %>
               </label>
             </div>
 
             <div class="cp_iptxt">
               <%= f.label :period, "勤務期間" %><br>
               <label class="ef">
-              <%= f.text_field :period ,placeholder: "勤務期間",:readonly => true %>
+              <%= f.text_area :period ,placeholder: "勤務期間",:readonly => true %>
             </label>
           </div>
 
@@ -72,14 +72,14 @@
           <div class="cp_iptxt">
             <%= f.label :tel, "連絡先電話番号" %><br>
             <label class="ef">
-            <%= f.number_field :tel ,placeholder: "電話番号",:readonly => true %>
+            <%= f.text_area :tel ,placeholder: "電話番号",:readonly => true %>
             </label>
           </div>
 
           <div class="cp_iptxt">
             <%= f.label :email, "連絡先メールアドレス" %><br>
             <label class="ef">
-            <%= f.email_field :email ,placeholder: "メールアドレス",:readonly => true %>
+            <%= f.text_area :email ,placeholder: "メールアドレス",:readonly => true %>
             </label>
           </div>
 

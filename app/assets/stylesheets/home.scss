@@ -17,15 +17,18 @@
     margin-bottom: 5%;
 }
 
+.home_img{
+    width: 100%;
+    text-align: center;
+}
+
 .ptj_content{
     background-color: #EEEEEE;
     margin-bottom: 10%;
-    display: flex;
 }
 
-.ptj_content p.name{
-    margin-top: 7px;
-    margin-bottom: 0;
+.ptj_name{
+    margin: 7px 0 0 7px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -36,7 +39,6 @@
 }
 
 .right_content{
-    margin-left: 10px;
     width: 100%;
 }
 
@@ -45,9 +47,9 @@
 }
 
 .content_detail{
+    min-height: 20%;
     width: 100%;
     display: flex;
-    margin-top: 20px;
     justify-content: space-between;
 }
 
@@ -65,14 +67,14 @@
     font-weight: bolder;
 }
 
+.content_detail > .occupation{
+    border-left: none;
+}
+
 .img_prev{
     width: 190px;
     height: 190px;
     padding: 7px;
-}
-
-.occupation,.wage{
-    width: 33%;
 }
 
 .inf, .inf_left, .inf_right{
@@ -105,8 +107,12 @@
     margin-bottom: 20%;
 }
 
-.inf-textarea{
+.inf_textarea{
     white-space: pre-wrap;
+}
+
+.inf_textarea p{
+    margin: 0;
 }
 
 .content_new{
@@ -145,7 +151,6 @@
         width: 100%;
         display: flex;
         flex-flow: column;
-        margin-top: 20px;
         justify-content: space-between;
     }
 
@@ -156,11 +161,8 @@
     }
 
     .right_content{
+        
         margin-left: 0;
-    }
-
-    .img_prev{
-        margin-top: 5%;
     }
 
 }

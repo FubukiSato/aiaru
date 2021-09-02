@@ -7,9 +7,9 @@ class HomeController < ApplicationController
         @work.each do |work|
             @limit = work.updated_at
             @limit_date = @limit.to_date
-            @limit_1 = @limit_date + 60
+            @limit_60 = @limit_date + 60
             @now = Time.now
-            if @now.after? @limit_1
+            if @now.after? @limit_60
                 work.destroy
             end
         end

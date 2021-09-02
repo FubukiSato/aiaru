@@ -60,7 +60,7 @@
             <div class="cp_iptxt">
               <span>(※)</span><%= f.label :occupation, "職種",class: "label_mini"%><br>
               <label class="ef">
-                <%= f.text_field :occupation ,placeholder: "職種" %>
+                <%= f.text_area :occupation ,placeholder: "職種" %>
               </label>
               <% if @work.errors.include?(:occupation) %>
                 <div class="error_message">
@@ -73,7 +73,7 @@
             <div class="cp_iptxt">
               <span>(※)</span><%= f.label :wage, "時給",class: "label_mini" %><br>
               <label class="ef">
-                <%= f.number_field :wage ,placeholder: "時給(円)" %>
+                <%= f.text_area :wage ,placeholder: "(例) 基本990円 （夜間22時以降: 1300円)" %>
               </label>
               <% if @work.errors.include?(:wage) %>
                 <div class="error_message">
@@ -98,7 +98,7 @@
             <div class="cp_iptxt">
               <span>(※)</span><%= f.label :location, "勤務地" %><br>
               <label class="ef">
-                <%= f.text_field :location ,placeholder: "勤務地" %>
+                <%= f.text_area :location ,placeholder: "勤務地" %>
               </label>
               <% if @work.errors.include?(:location) %>
                 <div class="error_message">
@@ -110,7 +110,7 @@
             <div class="cp_iptxt">
               <span>(※)</span><%= f.label :period, "勤務期間" %><br>
               <label class="ef">
-                <%= f.text_field :period ,placeholder: "勤務期間" %>
+                <%= f.text_area :period ,placeholder: "勤務期間" %>
               </label>
             <% if @work.errors.include?(:period) %>
               <div class="error_message">
@@ -129,7 +129,7 @@
           <div class="cp_iptxt">
             <span>(※)</span><%= f.label :tel, "連絡先電話番号(ハイフン有り)" %><br>
             <label class="ef">
-              <%= f.text_field :tel ,placeholder: "000-0000-0000 etc.." %>
+              <%= f.text_area :tel ,placeholder: "000-0000-0000 etc.." %>
             </label>
             <% if @work.errors.include?(:tel) %>
               <div class="error_message">
