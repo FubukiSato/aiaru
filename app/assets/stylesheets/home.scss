@@ -28,7 +28,7 @@
 }
 
 .ptj_name{
-    margin: 7px 0 0 7px;
+    padding: 10px 0 0 15px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -136,6 +136,50 @@
 
 @media screen and (max-width: 959px) {
     .home_contents{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .ptj_name{
+        margin: 0;
+        margin-top: 5%;
+        padding: 0;
+    }
+
+    .ptj_content{
+        background-color: #EEEEEE;
+        margin-bottom: 20%;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .content_detail{
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    .content_detail div{
+        border-left: none;
+        border-bottom: 2px solid #008080;
+        width: 100%;
+    }
+
+    .content_detail .wage{
+        border-bottom: none;
+    }
+
+    .right_content{
+        padding-bottom: 0;
+        margin-left: 0;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .home_contents{
         margin-left: 10%;
         margin-right: 10%;
     }
@@ -146,6 +190,12 @@
         text-align: center;
         display: flex;
         flex-flow: column;
+    }
+
+    .ptj_name{
+        margin: 0;
+        margin-top: 5%;
+        padding: 0;
     }
 
     .content_detail{
