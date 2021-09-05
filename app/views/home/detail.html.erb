@@ -13,6 +13,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="fas fa-store fa-lg"></i>
+            店名
         </div>
         <div class="inf_right">
             <p><%= @work.name%></p>
@@ -22,6 +23,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="fas fa-briefcase fa-lg"></i>
+            職種
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.occupation %></p>
@@ -31,6 +33,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="fas fa-yen-sign fa-lg"></i>
+            時給
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.wage%></p>
@@ -40,6 +43,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="far fa-clock fa-lg"></i>
+            就業時間
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.hours %></p>
@@ -49,6 +53,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="fas fa-map-marker-alt fa-lg"></i>
+            勤務地
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.location %></p>
@@ -58,6 +63,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="far fa-calendar-alt fa-lg"></i>
+            勤務期間
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.period %></p>
@@ -67,6 +73,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="fas fa-link fa-lg"></i>
+            ホームページ
         </div>
         <div class="inf_right">
             <a href= <%= @work.link %> ><p><%= @work.link %></p></a>
@@ -76,6 +83,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="fas fa-phone fa-lg"></i>
+            連絡先
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.tel %></p>
@@ -85,6 +93,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="far fa-envelope fa-lg"></i>
+            メールアドレス
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.email %></p>
@@ -94,6 +103,7 @@
     <div class="inf">
         <div class="inf_left">
             <i class="far fa-clipboard fa-lg"></i>
+            備考
         </div>
         <div class="inf_right inf_textarea">
             <p><%= @work.note %></p>

@@ -91,8 +91,11 @@
 }
 
 .inf_left{
-    min-width: 10%;
+    min-width: 20%;
+    max-width: 20%;
     background-color: #EEEEEE;
+    flex-direction: column;
+    text-align: center;
     justify-content: center; /*左右中央揃え*/
     align-items: center;     /*上下中央揃え*/
 }
