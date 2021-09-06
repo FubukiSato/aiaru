@@ -1,0 +1,15 @@
+current directory: /Users/fubuki/Desktop/webapp/aiaru/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/fubuki/.rbenv/versions/3.0.2/bin/ruby -I /Users/fubuki/.rbenv/versions/3.0.2/lib/ruby/3.0.0 -r ./siteconf20210907-35788-spz2mv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/fubuki/Desktop/webapp/aiaru/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= clean
+
+current directory: /Users/fubuki/Desktop/webapp/aiaru/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\=
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/fubuki/Desktop/webapp/aiaru/vendor/bundle/ruby/3.0.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20210907-35788-5uvdx3
