@@ -12,6 +12,11 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  #add deploy########################################
+  config.serve_static_assets = true
+  config.assets.js_compressor = :uglifier
+#####################################################
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
