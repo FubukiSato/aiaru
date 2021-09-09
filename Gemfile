@@ -76,4 +76,5 @@ gem 'rufo'
 
 group :production do
   gem 'pg'
+  gem 'rack-mini-profiler', '~> 2.0'
 end
