@@ -74,8 +74,11 @@ gem 'rufo'
 
 ##以下デプロイのために追加
 
+group :production , :development do
+  gem 'rack-mini-profiler'
+end
+
 group :production do
   gem 'pg'
   gem 'uglifier'
-  gem 'rack-mini-profiler'
 end
