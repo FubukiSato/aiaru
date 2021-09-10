@@ -75,8 +75,6 @@ gem 'rufo'
 
 ##以下デプロイのために追加
 
-
-
 group :production do
   gem 'pg'
   gem 'uglifier'
