@@ -75,7 +75,7 @@ gem 'rufo'
 ##以下デプロイのために追加
 
 group :production , :development do
-  gem 'rack-mini-profiler'
+  gem 'rack-mini-profiler',require: false
 end
 
 group :production do
