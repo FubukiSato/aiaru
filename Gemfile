@@ -78,4 +78,5 @@ gem 'rufo'
 group :production do
   gem 'pg'
   gem 'uglifier'
+  gem 'rails_12factor'
 end
