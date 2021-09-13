@@ -123,7 +123,7 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  host = 'aiaru.herokuapp.com'
+  host = 'https://aiaru.herokuapp.com/'
   config.action_mailer.default_url_options = { host: host }
   config.action_mailer.raise_delivery_errors = true
   ActionMailer::Base.delivery_method = :smtp
