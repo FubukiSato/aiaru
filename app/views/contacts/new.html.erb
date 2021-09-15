@@ -1,0 +1,37 @@
+<div class="content_new">
+<h1>お問い合わせ</h1>
+
+<%= form_for(@contact, url: confirm_path) do |f| %>
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :name, 'お名前' %><br>
+    <label class="ef">
+    <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+    </label>
+  </div>
+
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :name, '返信先メールアドレス'%><br>
+    <label class="ef">
+    <%= f.email_field :email %>
+    </label>
+  </div>
+
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :phone_number, '電話番号'%><br>
+    <label class="ef">
+    <%= f.text_field :phone_number %>
+    </label>
+  </div>
+
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :message, 'メッセージ' %><br>
+    <label class="ef">
+    <%= f.text_area :message, class: 'form-control' %>
+    </label>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '入力内容確認',class: 'btn' %>
+  </div>
+<% end %>
+</div>

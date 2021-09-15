@@ -1,0 +1,41 @@
+<div class="content_new">
+<h1>確認画面</h1>
+
+<%= form_for(@contact, url: {controller: 'contacts', action: 'create' }, method: :post) do |f| %>
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :name, 'お名前' %><br>
+    <label class="ef">
+    <%= f.text_field :name,:readonly => true %>
+    </label>
+  </div>
+
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :name, '返信先メールアドレス'%><br>
+    <label class="ef">
+    <%= f.email_field :email,:readonly => true %>
+    </label>
+  </div>
+
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :phone_number, '電話番号'%><br>
+    <label class="ef">
+    <%= f.text_field :phone_number,:readonly => true %>
+    </label>
+  </div>
+
+  <div class="cp_iptxt">
+    <span>(※)</span><%= f.label :message, 'メッセージ' %><br>
+    <label class="ef">
+    <%= f.text_area :message,:readonly => true %>
+    </label>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '送信',class: 'btn' %>
+  </div>
+  
+  <div class="back_action">
+    <button type="button",class="back_btn" onclick=history.back()>戻る</button>
+  </div>
+<% end %>
+</div>

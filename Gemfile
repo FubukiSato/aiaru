@@ -73,6 +73,9 @@ gem 'dotenv-rails'
 
 gem 'rufo'
 
+gem 'rails-i18n'
+gem 'enum_help'
+
 ##以下デプロイのために追加
 
 group :production do
