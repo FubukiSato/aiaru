@@ -9,4 +9,4 @@ User.create!(
     email: "aiaru2200007@gmail.com",
     password:  "aiaru1270052",
     password_confirmation: "aiaru1270052",
-    admin: true)あ
+    admin: true)
