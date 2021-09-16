@@ -33,13 +33,16 @@ class PostController < ApplicationController
             session[:tel] = nil
             redirect_to("/home")
         else
-            flash.now[:alert] = "アルバイトの登録に失敗しました"
             render 'new'
         end
     end
 
     def createconfirm
         @work = Work.new(work_params)
+        if @work.invalid?
+            flash.now[:alert] = "入力漏れがあります"
+            render :new
+        end
         session[:image_cache_name] = @work.image.cache_name
         session[:name] = params[:work][:name]
         session[:occupation] = params[:work][:occupation]

@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
       def confirm
         @contact = Contact.new(contact_params)
         if @contact.invalid?
+          flash.now[:alert] = "お問い合わせに失敗しました"
           render :new
         end
       end
@@ -23,6 +24,7 @@ class ContactsController < ApplicationController
           flash[:notice] = "お問い合わせが完了しました"
           redirect_to("/home")
         else
+          flash.now[:alert] = "お問い合わせに失敗しました"
           render :new
         end
       end

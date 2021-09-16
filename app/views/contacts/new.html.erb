@@ -7,13 +7,23 @@
     <label class="ef">
     <%= f.text_field :name, autofocus: true, class: 'form-control' %>
     </label>
+    <% if @contact.errors.include?(:name) %>
+      <div class="error_message">
+        <p><%= @contact.errors.full_messages_for(:name).first %></p>
+      </div>
+    <% end %>
   </div>
 
   <div class="cp_iptxt">
-    <span>(※)</span><%= f.label :name, '返信先メールアドレス'%><br>
+    <span>(※)</span><%= f.label :email, '返信先メールアドレス'%><br>
     <label class="ef">
     <%= f.email_field :email %>
     </label>
+    <% if @contact.errors.include?(:email) %>
+      <div class="error_message">
+        <p><%= @contact.errors.full_messages_for(:email).first %></p>
+      </div>
+    <% end %>
   </div>
 
   <div class="cp_iptxt">
@@ -21,6 +31,11 @@
     <label class="ef">
     <%= f.text_field :phone_number %>
     </label>
+    <% if @contact.errors.include?(:phone_number) %>
+      <div class="error_message">
+        <p><%= @contact.errors.full_messages_for(:phone_number).first %></p>
+      </div>
+    <% end %>
   </div>
 
   <div class="cp_iptxt">
@@ -28,6 +43,11 @@
     <label class="ef">
     <%= f.text_area :message, class: 'form-control' %>
     </label>
+    <% if @contact.errors.include?(:message) %>
+      <div class="error_message">
+        <p><%= @contact.errors.full_messages_for(:message).first %></p>
+      </div>
+    <% end %>
   </div>
 
   <div class="actions">

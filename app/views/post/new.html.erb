@@ -60,7 +60,7 @@
             <div class="cp_iptxt">
               <span>(※)</span><%= f.label :occupation, "職種",class: "label_mini"%><br>
               <label class="ef">
-                <%= f.text_area :occupation ,placeholder: "職種" %>
+                <%= f.text_area :occupation ,placeholder: "（例）ホールスタッフ, レジ, 書籍販売スタッフ" %>
               </label>
               <% if @work.errors.include?(:occupation) %>
                 <div class="error_message">
@@ -98,7 +98,7 @@
             <div class="cp_iptxt">
               <span>(※)</span><%= f.label :location, "勤務地" %><br>
               <label class="ef">
-                <%= f.text_area :location ,placeholder: "勤務地" %>
+                <%= f.text_area :location ,placeholder: "（例）Aiaru市Aiaru町10-23" %>
               </label>
               <% if @work.errors.include?(:location) %>
                 <div class="error_message">
@@ -110,7 +110,7 @@
             <div class="cp_iptxt">
               <span>(※)</span><%= f.label :period, "勤務期間" %><br>
               <label class="ef">
-                <%= f.text_area :period ,placeholder: "勤務期間" %>
+                <%= f.text_area :period ,placeholder: "（例）１ヶ月以上 , ３ヶ月間限定 " %>
               </label>
             <% if @work.errors.include?(:period) %>
               <div class="error_message">
