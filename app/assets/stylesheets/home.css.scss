@@ -137,6 +137,26 @@
     text-align: right;
 }
 
+.explain_content{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.explain_content h1{
+    margin-top: 100px;
+    margin-bottom: 20px; 
+    border-bottom: solid 2px;
+}
+
+.explain_content h3{
+    margin-top: 30px
+}
+
+.explain_content li{
+    margin-bottom: 5px;
+}
+
 @media screen and (max-width: 959px) {
     .home_contents{
         margin-left: 20%;

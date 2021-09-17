@@ -7,15 +7,14 @@ Rails.application.routes.draw do
     get 'users/sign_out' => 'devise/sessions#destroy'
   end
 
-  root to: "home#top"
+  root to: "home#explain"
 
   resources :contacts, only: [:new, :create]
   post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
   post 'contacts/back', to: 'contacts#back', as: 'back'
-  get 'done', to: 'contacts#done', as: 'done'
 
 
-
+  get 'home/explain' => 'home#explain'
   get 'home' => 'home#top'
   get 'home/detail/:id' => 'home#detail'
   

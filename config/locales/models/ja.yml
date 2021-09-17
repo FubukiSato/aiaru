@@ -11,3 +11,9 @@ ja:
           period: 勤務期間
           email: 連絡先メールアドレス
           tel: 連絡先電話番号
+
+        contact:
+          name: お名前
+          email: 返信先メールアドレス
+          phone_number: 電話番号
+          message: メッセージ

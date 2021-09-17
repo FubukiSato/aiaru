@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
-  
+
+    def explain
+
+    end
+
     def top
         @work = Work.order("created_at DESC")
 
